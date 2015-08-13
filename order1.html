@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>学生信息</title>
+	<link rel="stylesheet" href="css/themes/myapp.min.css" />
+  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/shadowinit.css">
+	<link rel="stylesheet" type="text/css" href="css/order.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header" id="header_color" class="myheader">
+			<a href="#" data-rel="back" class="myback ui-btn-trans">返回</a>
+			<h1 class="mytitle">学生信息</h1>
+			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
+			<div data-role="navbar" id="nav">
+				<ul>
+					<li><a href="#" class="active">未处理</a></li>
+					<li><a href="order2.html">进行中</a></li>
+					<li><a href="order3.html" class="reddot">已处理</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" id="main">
+			<ul data-role="listview">
+				<li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<span class="status sta_true">已完成</span>
+						<span class="newms"></span>							
+					</a>					
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<span class="status sta_false">已推辞</span>				
+					</a>					
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<span class="status sta_true">已完成</span>
+						<span class="newms"></span>							
+					</a>					
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<span class="status sta_false">已推辞</span>
+						<span class="newms"></span>						
+					</a>					
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<span class="status sta_true">已完成</span>						
+					</a>					
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<span class="status sta_false">已推辞</span>
+						<span class="newms"></span>						
+					</a>					
+				</li>
+			</ul>			
+		</div>
+		<div data-role="panel" data-position="right" data-position-fixed="true" data-display="reveal" id="right_panel">
+			<h2><img src="images/head_sam.gif"></h2>
+			<h1>袁拓</h1>
+			<ul id="sidelist">
+				<li><a href="#">返回首页</a></li>
+				<li><a href="#">更换账号</a></li>
+				<li><a href="#">退出登录</a></li>
+			</ul>
+		</div>		
+	</div>	
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	$(document).on("pagecreate",function(){
+		$('#right_panel').panel();
+	});
+</script>
+</html>

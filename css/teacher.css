@@ -1,0 +1,145 @@
+*{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-weight: normal!important;
+}
+.ui-page-theme-a,.ui-body-inherit{
+	text-shadow: none!important;
+}
+.ui-content{
+	padding: 0;
+}
+.myheader{
+	height: 46px;
+}
+.mytitle{
+	color: #fff;
+	font-size: 20px!important;
+}
+#header_trans{
+	background: rgba(0,0,0,0);
+	border: 0;
+	position: fixed;
+	z-index: 999;
+}
+.ui-btn-trans{
+	background-color: rgba(0,0,0,0)!important;
+	color: #fff!important;
+	border: 0;
+	padding-left: 28px;
+	box-shadow: none;
+	font-size: 16px!important;
+}
+.ui-btn-trans:after{
+	content: '';
+	display: block;
+	width: 16px;
+	height:30px;	
+	position: absolute;
+	left: 6px;
+	top: 50%;
+	margin-top: -15px;
+}
+.myback::after{
+	background: url(../images/back.gif) no-repeat left;
+	background-size: 100%;
+}
+.mymenu{
+	top: 14px;
+	right: 0px;
+}
+.mymenu:after{
+	background: url(../images/menu.gif) no-repeat left;
+	background-size: 100%;
+	width: 20px;
+}
+#add_bg{
+	background: url(../images/header_bg.gif) no-repeat center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	height: 134px;
+	padding-top: 88px;	
+}
+.cir_img_wrapper{
+	display: block;
+	width: 90px;
+	height: 90px;
+	border: 3px solid #fff;
+	border-radius: 50px;
+	margin: 0 auto;
+}
+.cir_img_wrapper img{
+	width: 100%;
+}
+.my-gridc1{
+	width: 36%;
+	text-align: center;
+	float: left;
+}
+.my-gridc2{
+	width: 64%;
+	float: left;
+}
+#add_bg li{
+	color: #cbeeff;	
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-weight: lighter!important;
+	font-size: 14px;
+}
+#name{
+	color: #fff!important;
+	font-size: 24px!important;
+	display: inline-block;
+}
+#source{
+	display: inline-block;
+	padding-left: 10px;
+}
+#teach_time{
+	padding-left: 30px;
+	background: url(../images/clock.gif) no-repeat left;
+	background-size: 17px;
+	line-height: 17px;
+}
+#id_type{
+	padding-left: 30px;
+	background: url(../images/lv.gif) no-repeat left;
+	background-size: 17px;
+	line-height: 17px;
+}
+#bigbtn{
+	margin-top: 176px;
+}
+#bigbtn .ui-block-a,#bigbtn .ui-block-b{
+	text-align: center;
+	padding: 12px;
+}
+#bigbtn li{
+	background-color: #fff;
+}
+#bigbtn a{
+	text-decoration: none;
+	color: #919191;
+	height: 100%;
+	display: block;
+	background: #f6f6f6;
+	position: relative;
+	text-align: center;
+}
+#bigbtn a img{
+	width: 40%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+#bigbtn a h2{
+	font-size: 14px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
