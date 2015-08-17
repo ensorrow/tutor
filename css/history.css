@@ -175,6 +175,9 @@ body{
 	width: 100px;
 	text-align: left;
 }
+.his1 .comment_stat{
+	width: 50px;
+}
 .comment_stat i{
 	color: #fd6f43;
 	font-style: normal;
@@ -269,4 +272,28 @@ li.ui-first-child::before{
 	border: 1px solid #a2a2a2;
 	border-radius: 3px;
 	margin: 5px auto 120px auto;
+}
+#chart_wrap{
+	width: 100%;
+	height: 400px;
+	overflow: scroll;
+}
+#his2 .ui-panel-wrapper{
+	background: url(../images/yuan.png) bottom no-repeat;
+	background-size: 100%;
+}
+#income_sum{
+	padding: 10px 30px;	
+	color: #44b4ee;
+	margin: 12px 0;
+	background: url(../images/income.png) no-repeat 25px 5px;
+	background-size: 27px;
+	background-color: #f8f8f8;
+}
+#income_sum span{
+	padding-left: 30px;	
+}
+#income_sum i{
+	font-style: normal;
+	color: #ffa61b;
 }
