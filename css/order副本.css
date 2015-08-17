@@ -69,37 +69,38 @@
 	top: -28px;
 	right: 6px;
 }
-#nav{
-	background: url(../images/nav_bg.png) repeat-x;
-}
 #nav .active{
-	border-bottom: 2px solid #30aaea;
-	color: #30aaea!important;
+	border-bottom: 2px solid #0d79b1;
 }
 .ui-navbar{
 	padding: 6px 20px;
 	background-color: #30aaea;
 }
 .ui-navbar li a{
-	color: #aeaeae!important;
+	color: #fff!important;
+	background-color: #30aaea!important;
 	border-top-width: none!important;
 	text-decoration: none;
 }
 .ui-navbar .ui-btn{border-top-width: none!important;}
 .ui-navbar li:first-child{
 	border-left: none!important;
-	border-right: 1px solid #ececec;
+	border-right: 1px solid #277ca7;
 }
 .ui-navbar li:first-child a{border-left: none!important;}
 .ui-navbar li:nth-child(2){
-	border-right: 1px solid #ececec;
-	border-left: 1px solid #ffffff;
+	border-right: 1px solid #277ca7;
+	border-left: 1px solid #99d1ed;
 }
 .ui-navbar li:last-child{
-	border-left: 1px solid #ffffff;
+	border-left: 1px solid #99d1ed;
+}
+#clear_fix{
+	height: 50.5px;
+	width: 100%;
 }
 #main{
-	margin-top: 47.5px;
+	margin-top: 50.5px;
 }
 #main .message{
 	padding-right: 20px;
@@ -142,9 +143,6 @@
 	display: inline-block;
 	color: #a2a2a2;
 	font-size: 14px;
-}
-#main li h3{
-	margin-left: 10px;
 }
 .status{
 	padding-left: 25px;
