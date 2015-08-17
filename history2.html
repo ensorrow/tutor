@@ -9,9 +9,7 @@
 	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/history.css">
 	<link rel="stylesheet" type="text/css" href="css/panel.css">
-	<script src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/ichart.1.2.min.js"></script>
-	<script type="text/javascript" src="js/chart.js"></script>
+	<script src="js/jquery.min.js"></script>	
 </head>
 <body id="his2">
 	<div data-role="page">
@@ -21,13 +19,15 @@
 			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
 			<div data-role="navbar" id="nav">
 				<ul>
-					<li><a href="#">历史教学</a></li>
-					<li><a href="order2.html" class="active">收入统计</a></li>
-					<li><a href="order3.html" class="reddot">累计评价</a></li>
+					<li><a href="history1.html">历史教学</a></li>
+					<li><a href="#" class="active">收入统计</a></li>
+					<li><a href="history3.html" class="reddot">累计评价</a></li>
 				</ul>
 			</div>
 		</div>
 		<div data-role="content" id="main">
+		<script type="text/javascript" src="js/ichart.1.2.min.js"></script>
+		<script type="text/javascript" src="js/chart.js"></script>
 			<div id="chart_wrap">
 				<div id='canvasDiv'></div>
 			</div>
