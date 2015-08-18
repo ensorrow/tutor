@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>Untitled Document</title>
+	<link rel="stylesheet" href="css/themes/myapp.min.css" />
+  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/waiting.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+</head>
+<body>
+	<div data-role="page" id="page">
+		<div data-role="header" class="header_shadow">
+			<a href="#" data-rel="back" class="myback ui-btn-trans">返回</a>
+			<h1 class="mytitle">学生信息</h1>
+			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
+		</div>
+		<div data-role="content">
+			<div id="stu_info" class="my-grid">
+				<div class="my-gridc1">
+					<div class="cir_img_wrapper">
+						<img src="images/head_sam.gif">
+					</div>
+					<div id="header_deco">
+						<img src="images/header_deco2.png">
+					</div>
+				</div>
+				<div class="my-gridc2">
+					<ul>
+						<li id="name">吕哲扬</li>
+						<li id="grade">小学六年级</li>
+						<li id="addr">西安交通大学/仲英书院/3栋405</li>
+						<li id="subject">在读<span>一</span>门：<span>物理</span></li>
+					</ul>
+				</div>
+			</div>
+			<div id="need">
+				正在补习：<span>数学</span>
+			</div>
+			<div id="self_intro">
+				<h1>自身情况介绍：</h1>
+				<p>没钱交学费，好心人来教教我吧!</p>
+			</div>
+			<div id="requirement">
+				<h1>对老师的要求</h1>
+				<p>心地善良，和蔼可亲，诚实守信，遵纪守法，敬业奉献，团结友爱，喜闻乐见</p>
+			</div>
+			<footer>				
+				<a href="#">接受订单</a>
+				<a href="#">拒绝订单</a>
+			</footer>
+		</div>
+		<div data-role="panel" data-position="right" data-position-fixed="true" data-display="reveal" id="right_panel">
+			<h2><img src="images/head_sam.gif"></h2>
+			<h1>袁拓</h1>
+			<ul id="sidelist">
+				<li><a href="#">返回首页</a></li>
+				<li><a href="#">更换账号</a></li>
+				<li><a href="#">退出登录</a></li>
+			</ul>
+		</div>	
+	</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	$(document).on("pagecreate",function(){
+		$('#right_panel').panel();
+	});
+</script>
+</html>
