@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+	<title>教师申请</title>
+	<link rel="stylesheet" href="css/themes/myapp.min.css" />
+  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/teacher_list.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	
+</head>
+<body>
+	<div data-role="page" id="page">
+		<div data-role="header" class="header_shadow">
+			<a href="#" data-rel="back" class="myback ui-btn-trans">返回</a>
+			<h1 class="mytitle">学生信息</h1>
+			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
+		</div>
+		<div data-role="content" id="main">
+			<div id="header_wra" class="my-grid">
+				<div class="my-gridc1">
+					<div class="cir_img_wrapper"><img src="images/head_sam.gif"></div>
+				</div>
+				<hgroup class="my-gridc2">
+					<h1>等级：<span>Lv2</span>&nbsp<span>小学老师</span></h1>
+					<h2>时长：<span>23小时</span></h2>
+				</hgroup>
+			</div>
+			<form>
+				<h2>基本信息</h2>
+				<ul id="cm0" class="ui-grid-a">
+					<li class="ui-block-a">
+						<input type="text" placeholder="姓名">
+					</li>
+					<li class="ui-block-b">
+						<input type="text" id="gra_sch" placeholder="毕业/在读院校">
+					</li>
+				</ul>
+				<ul>
+					<!-- 性别选择 -->
+					<li id="gender_wra">
+						<legend>性别：</legend>
+						<label for="man">男</label>
+						<input type="radio" id="man" name="gender" checked>
+						<label for="woman">女</label>
+						<input type="radio" id="woman" name="gender">
+					</li>
+					<li id="job_wra">
+						<legend>身份类型：</legend>
+						<label for="teac">教师</label>
+						<input type="radio" id="teac" name="job">
+						<label for="unteac">非教师</label>
+						<input type="radio" id="unteac" name="job" checked>
+					</li>
+					<div style="clear:both;"></div>
+					<!-- 学历选择 -->
+					<li>
+						<legend>学历等级：</legend>
+						<label for="gz">高中</label>
+						<input type="radio" name="graduate" id="gz">
+						<label for="dz">大专</label>
+						<input type="radio" name="graduate" id="dz">
+						<label for="dx">大学</label>
+						<input type="radio" name="graduate" id="dx" checked>
+					</li>
+				</ul>
+			</form>
+			<form>
+				<h2>教学科目</h2>
+				<ul id="cm1">
+					<!-- 勾选小学，初中，高中分别显示对应列表 -->
+					<li>
+						<label for="primary">小学</label>
+						<input type="checkbox" name="rank" id="primary">
+						<fieldset data-role="controlgroup" data-type="horizontal" id="pri">
+							<label for="chk11">语文</label>
+							<input type="checkbox" id="chk11">		
+							<label for="chk12">数学</label>
+							<input type="checkbox" id="chk12">		
+							<label for="chk13">英语</label>
+							<input type="checkbox" id="chk13">
+						</fieldset>
+					</li>
+					<li>
+						<label for="middle">初中</label>
+						<input type="checkbox" name="rank" id="middle">
+						<fieldset data-role="controlgroup" data-type="horizontal" class="mid">	
+							<label for="chk21">语文</label>
+							<input type="checkbox" id="chk21">
+						
+							<label for="chk22">数学</label>
+							<input type="checkbox" id="chk22">
+						
+							<label for="chk23">英语</label>
+							<input type="checkbox" id="chk23">						
+						
+							<label for="chk24">物理</label>
+							<input type="checkbox" id="chk24">
+						
+							<label for="chk25">化学</label>
+							<input type="checkbox" id="chk25">
+						
+							<label for="chk26">生物</label>
+							<input type="checkbox" id="chk26">
+						
+							<label for="chk27">政治</label>
+							<input type="checkbox" id="chk27">
+						
+							<label for="chk28">历史</label>
+							<input type="checkbox" id="chk28">
+						
+							<label for="chk29">地理</label>
+							<input type="checkbox" id="chk29">
+						</fieldset>
+					</li>
+					<li>
+						<label for="high">高中</label>
+						<input type="checkbox" name="rank" id="high">
+						<fieldset data-role="controlgroup" data-type="horizontal" id="hig">	
+							<label for="chk31">语文</label>
+							<input type="checkbox" id="chk31">
+						
+							<label for="chk32">数学</label>
+							<input type="checkbox" id="chk32">
+						
+							<label for="chk33">英语</label>
+							<input type="checkbox" id="chk33">
+						
+							<label for="chk34">物理</label>
+							<input type="checkbox" id="chk34">
+						
+							<label for="chk35">化学</label>
+							<input type="checkbox" id="chk35">
+						
+							<label for="chk36">生物</label>
+							<input type="checkbox" id="chk36">
+						
+							<label for="chk37">政治</label>
+							<input type="checkbox" id="chk37">
+						
+							<label for="chk38">历史</label>
+							<input type="checkbox" id="chk38">
+						
+							<label for="chk39">地理</label>
+							<input type="checkbox" id="chk39">
+						</fieldset>
+					</li>
+				</ul>
+				<input type="submit" value="提交" class="mySub" data-role="none">
+			</form>
+		</div>
+		<div data-role="panel" data-position="right" data-position-fixed="true" data-display="reveal" id="right_panel">
+			<h2><img src="images/head_sam.gif"></h2>
+			<h1>袁拓</h1>
+			<ul id="sidelist">
+				<li><a href="#">返回首页</a></li>
+				<li><a href="#">更换账号</a></li>
+				<li><a href="#">退出登录</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.mid input,#pri input,#hig input').checkboxradio('disable');
+		var a=new Array('0','0','0');
+		function chkswitch(id,n,selector){
+			$(id).change(function(event) {
+				a[n]++;
+				if(a[n]%2==1){
+					$(selector).checkboxradio('enable');
+				}
+				else{
+					$(selector).checkboxradio('disable');
+				}
+			});
+		}
+		chkswitch('#primary','0','#pri input');
+		chkswitch('#middle','1','.mid input');
+		chkswitch('#high','2','#hig input');
+	})
+</script>
+</html>
