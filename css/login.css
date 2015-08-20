@@ -1,0 +1,69 @@
+*{
+	text-shadow: none;
+}
+#page{
+	background: url(../images/login_bg.gif) no-repeat;
+	background-size: cover;
+	-webkit-background-size: cover;
+}
+#cen_group{	
+	width: 75%;
+	margin: 0 auto;
+	margin-top: 125px;
+}
+#cen_group .ui-input-text,#cen_group .ui-input-btn{
+	border-radius: 35px;
+	margin-bottom: 26px;
+	border: 0;
+}
+#cen_group input{
+	font-size: 16px;
+	padding: 10px 0;
+	border: 0;
+	padding-left: 40px;	
+	background-size: 20px;
+}
+#cen_group .ui-input-btn{
+	background-color: #72cfbc;
+	border: 0;
+	color: #fff;
+}
+#cen_group h1{
+	font-size: 16px;
+	color: #6bbce6;
+	text-align: right;
+	padding-bottom: 20px;
+}
+#cen_group h1:before{
+	content: '';
+	display: block;
+	width: 42%;
+	position: relative;
+	border: 1px solid #6bbce6;
+	left: 74px;
+	top: 12px;
+}
+#account{
+	background: url(../images/acc.png) no-repeat 10px;
+}
+#password{
+	background: url(../images/lock.png) no-repeat 10px;
+}
+.ui-block-a,.ui-block-b{position: relative;height: 35px;}
+.ui-grid-a a{
+	display: block;
+	text-decoration: none;
+	padding: 5px 10px;
+	border-radius: 20px;
+	border: 1px solid #3f9ed0;
+	color: #3f9ed0;
+	width: 50%;
+	text-align: center;
+	position: absolute;
+}
+.ui-block-a a{
+	right: 20px;
+}
+.ui-block-b a{
+	left: 20px;
+}
