@@ -7,18 +7,39 @@
 	<link rel="stylesheet" href="css/themes/myapp.min.css" />
   	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/downmenu.css">
 </head>
 <body>
 	<div data-role="page">
 		<div data-role="header">
-			<h1>头部</h1>
-			<div class="ui-btn-right">
-				<select data-native-menu="false" data-mini="true" data-inline="true" data-icon="arrow-d"  data-iconpos="notext" >
-					<option value="0">登录</option>
-					<option value="1">注册</option>
-					<option value="2">首页</option>
-				</select>
-			</div>
+			<a href="#" data-rel="back" class="myback ui-btn-trans">返回</a>
+			<h1 class="mytitle">搜索学生</h1>
+			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
+		</div>
+		<div data-role="navbar" id="nav">
+			<ul>
+				<li>
+					<select data-native-menu="false" data-inline="true" data-icon="carat-d">
+						<option value="0">登录</option>
+						<option value="1">注册</option>
+						<option value="2">首页</option>
+					</select>
+				</li>
+				<li>
+					<select data-native-menu="false" data-inline="true" data-icon="carat-d">
+						<option value="0">登录</option>
+						<option value="1">注册</option>
+						<option value="2">首页</option>
+					</select>
+				</li>
+				<li>
+					<select data-native-menu="false" data-inline="true" data-icon="carat-d">
+						<option value="0">登录</option>
+						<option value="1">注册</option>
+						<option value="2">首页</option>
+					</select>
+				</li>
+			</ul>
 		</div>
 	</div>
 </body>
