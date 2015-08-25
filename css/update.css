@@ -159,14 +159,14 @@
 	background-size: 35px;
 }
 #progress_wrap{
-	padding: 12.5px 30px;
+	padding: 12.5px 10px 12.5px 30px;
 	background-color: #f8f8f8;
 	color: #44b4ee;
 	margin: 12px 0;
 }
 #progress_bar{
 	display: inline-block;
-	width: 68%;
+	width: 60%;
 	height: 15px;
 	position: relative;
 	background-color: #a0a0a0;
@@ -176,7 +176,7 @@
 #progress_bar:before{
 	content: '';
 	display: inline-block;
-	width: 50%;
+	width: 75%;
 	height: 15px;
 	top: 0;
 	left: 0;
