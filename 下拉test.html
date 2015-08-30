@@ -11,38 +11,198 @@
 </head>
 <body>
 	<div data-role="page">
-		<div data-role="header">
+		<div data-role="header" id="header">
 			<a href="#" data-rel="back" class="myback ui-btn-trans">返回</a>
 			<h1 class="mytitle">搜索学生</h1>
 			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
-		</div>
-		<div data-role="navbar" id="nav">
+			<div data-role="navbar" id="nav">
 			<ul>
+				<li class="navli">
+					<a href="javascript" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-d ui-btn-icon-right">年级</a>
+					<ul class="submenu sub1">
+						<li class="active sub_gra">小学
+							<ul class="grade pri">
+								<li class="active">一年级</li>
+								<li>二年级</li>
+								<li>三年级</li>
+								<li>四年级</li>
+								<li>五年级</li>
+								<li>六年级</li>
+							</ul>
+						</li>
+						<li class="sub_gra">初中
+							<ul class="grade mid">
+								<li class="active">一年级</li>
+								<li>二年级</li>
+								<li>三年级</li>
+							</ul>
+						</li>
+						<li class="sub_gra">高中
+							<ul class="grade hig">
+								<li class="active">一年级</li>
+								<li>二年级</li>
+								<li>三年级</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="navli">
+					<a href="javascript" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-d ui-btn-icon-right">学科</a>
+					<ul class="submenu sub2">
+						<li class="active">语文</li>
+						<li>数学</li>
+						<li>外语</li>
+					</ul>
+				</li>
+				<li class="navli">
+					<a href="javascript" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-d ui-btn-icon-right">所在地</a>
+					<ul class="submenu sub3">
+						<li class="active">碑林区</li>
+						<li>雁塔区</li>
+						<li>莲湖区</li>
+						<li>未央区</li>
+						<li>新城区</li>
+						<li>阎良区</li>
+						<li>长安区</li>
+						<li>临潼区</li>
+						<li>灞桥区</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		</div>
+		
+		<div data-role="content" id="main">
+			<ul data-role="listview">
 				<li>
-					<select data-native-menu="false" data-inline="true" data-icon="carat-d">
-						<option value="0">登录</option>
-						<option value="1">注册</option>
-						<option value="2">首页</option>
-					</select>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<h4>西安交通大学/仲英书院/x栋xxx</h4>
+						<span class="ongoing">在读1门</span>
+						<span class="distance">1.6km</span>							
+					</a>					
 				</li>
 				<li>
-					<select data-native-menu="false" data-inline="true" data-icon="carat-d">
-						<option value="0">登录</option>
-						<option value="1">注册</option>
-						<option value="2">首页</option>
-					</select>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<h4>西安交通大学/仲英书院/x栋xxx</h4>
+						<span class="ongoing">在读2门</span>
+						<span class="distance">2.0km</span>				
+					</a>					
 				</li>
 				<li>
-					<select data-native-menu="false" data-inline="true" data-icon="carat-d">
-						<option value="0">登录</option>
-						<option value="1">注册</option>
-						<option value="2">首页</option>
-					</select>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<h4>西安交通大学/仲英书院/x栋xxx</h4>
+						<span class="ongoing">在读1门</span>
+						<span class="distance">4.0km</span>							
+					</a>					
 				</li>
+				<li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<h4>西安交通大学/仲英书院/x栋xxx</h4>
+						<span class="ongoing">在读2门</span>
+						<span class="distance">6.0km</span>						
+					</a>					
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<h4>西安交通大学/仲英书院/x栋xxx</h4>
+						<span class="ongoing">在读1门</span>					
+						<span class="distance">10.0km</span>
+					</a>					
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<h4>西安交通大学/仲英书院/x栋xxx</h4>
+						<span class="ongoing">在读2门</span>
+						<span class="distance">3.0km</span>						
+					</a>					
+				</li>
+			</ul>			
+		</div>
+		<div data-role="panel" data-position="right" data-position-fixed="true" data-display="reveal" id="right_panel">
+			<h2><img src="images/head_sam.gif"></h2>
+			<h1>袁拓</h1>
+			<ul id="sidelist">
+				<li><a href="#">返回首页</a></li>
+				<li><a href="#">更换账号</a></li>
+				<li><a href="#">退出登录</a></li>
 			</ul>
 		</div>
 	</div>
 </body>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	$('#nav a').click(function(){
+			return false;
+		});
+	function close1(obj){
+		$(document).click(function(e){
+			var target=e.target;
+			if(obj.get(0)!==target&&!$.contains(obj.get(0),target)){
+				obj.hide();
+			}
+		})
+	}
+	close1($('.sub1'));
+	close1($('.sub2'));
+	close1($('.sub3'));		
+	for(var i=0;i<3;i++){
+		$('.navli').eq(i).children('a').tap(function(){
+			$('.submenu').hide();
+			$(this).siblings('.submenu').toggle();
+		})
+		$('li.sub_gra').eq(i).tap(function(){
+			$(this).siblings('li.sub_gra').children('ul').hide().end().removeClass('active');
+			$(this).children('ul').show().end().addClass('active');
+		})
+	}
+	(function(obj){
+		obj.tap(function(){
+			$(this).siblings('li').removeClass('active');
+			$(this).addClass('active');
+		})
+	})($('.sub2 li,.sub3 li'))
+
+	function formImitate(obj){
+		var msg='';
+		for(var j=0;j<obj.children('li').size();j++){			
+			obj.children('li').eq(j).tap(function(){
+				$(this).siblings('li').removeClass('active');
+				$(this).addClass('active');
+				msg='';
+				msg+=k;
+				msg+=$(this).index();
+				console.log(msg);
+			})
+		}
+			
+	}
+	for(var k=0;k<3;k++){
+		formImitate($('.grade').eq(k));
+	}
+</script>
 </html>
