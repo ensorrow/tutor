@@ -68,6 +68,7 @@ body{
 	margin: 0 12px;
 	border-left: none;
 	position: relative;
+	padding: 5px 0;
 }
 #nav a.reddot:after{
 	content: '.';
@@ -75,8 +76,8 @@ body{
 	font-size: 44px;
 	font-weight: 700;
 	position: absolute;
-	top: -28px;
-	right: 6px;
+	top: -35px;
+	right: -1px;
 }
 #nav{
 	background: url(../images/nav_bg.png) repeat-x;
@@ -86,7 +87,7 @@ body{
 	color: #30aaea!important;
 }
 .ui-navbar{
-	padding: 6px 60px;
+	padding: 6px 60px 3px 60px;
 	background-color: #30aaea;
 }
 .ui-navbar li a{

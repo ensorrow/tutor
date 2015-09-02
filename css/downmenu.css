@@ -135,6 +135,10 @@
 #nav .grade li.active{
 	color: #4eaad5;
 }
+.ui-navbar{
+	padding-top: 3px;
+	background-color: #30aaea;
+}
 #main .message{
 	padding-right: 20px;
 	background: url(../images/message.png) no-repeat;
