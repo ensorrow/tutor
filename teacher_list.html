@@ -9,15 +9,16 @@
 	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/teacher_list.css">
 	<link rel="stylesheet" type="text/css" href="css/panel.css">
+	<link rel="stylesheet" type="text/css" href="css/aui.css">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	
 </head>
 <body>
 	<div data-role="page" id="page">
-		<div data-role="header" class="header_shadow">
+		<div data-role="header" id="myhead">
 			<a href="#" data-rel="back" class="myback ui-btn-trans">返回</a>
-			<h1 class="mytitle">个人信息</h1>
+			<h1 class="mytitle">教师信息</h1>
 			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
 		</div>
 		<div data-role="content" id="main">
@@ -31,19 +32,32 @@
 				</hgroup>
 			</div>
 			<form>
-				<h2>基本信息</h2>
-				<ul id="cm0" class="ui-grid-a">
-					<li class="ui-block-a">
-						<input type="text" placeholder="姓名">
+				<p class="aui-padded-10 aui-text-center">基本信息</p>
+				<ul class="aui-form">
+					<li class="aui-input-row">
+						<label class="aui-input-addon">姓名：</label>
+                		<input type="text" class="aui-input" value="吕哲扬" />
 					</li>
-					<li class="ui-block-b">
-						<input type="text" id="gra_sch" placeholder="毕业/在读院校">
+					<li class="aui-input-row">
+						<label class="aui-input-addon">毕业/在读院校：</label>
+                		<input type="text" class="aui-input" value="西安交大" />
+					</li>
+					<li class="aui-input-row radioimi">
+						<label class="aui-input-addon">性别：</label>
+                		<input type="text" class="aui-input" value="男" />
+					</li>
+					<li class="aui-input-row radioimi">
+						<label class="aui-input-addon">身份类型：</label>
+                		<input type="text" class="aui-input" value="教师" />
+					</li>
+					<li class="aui-input-row radioimi">
+						<label class="aui-input-addon">学历等级：</label>
+                		<input type="text" class="aui-input" value="高中" />
 					</li>
 				</ul>
 				<ul>
 					<!-- 性别选择 -->
-					<li id="gender_wra">
-						<legend>性别：</legend>
+					<li class="aui-input-row">
 						<label for="man">男</label>
 						<input type="radio" id="man" name="gender" checked>
 						<label for="woman">女</label>
@@ -162,26 +176,79 @@
 				<li><a href="#">退出登录</a></li>
 			</ul>
 		</div>
+		<div id="mask">
+			<div class="content1">
+				<ul class="radio_form">
+					<li>男</li>
+					<li>女</li>
+				</ul>
+				<ul class="radio_form">
+					<li>教师</li>
+					<li>非教师</li>
+				</ul>
+				<ul class="radio_form">
+					<li>高中</li>
+					<li>初中</li>
+					<li>小学</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </body>
 <script type="text/javascript">
-	$(document).ready(function(){
-		$('.mid input,#pri input,#hig input').checkboxradio('disable');
-		var a=new Array('0','0','0');
-		function chkswitch(id,n,selector){
-			$(id).change(function(event) {
-				a[n]++;
-				if(a[n]%2==1){
-					$(selector).checkboxradio('enable');
-				}
-				else{
-					$(selector).checkboxradio('disable');
-				}
-			});
-		}
-		chkswitch('#primary','0','#pri input');
-		chkswitch('#middle','1','.mid input');
-		chkswitch('#high','2','#hig input');
+	// $(document).ready(function(){
+	// 	$('.mid input,#pri input,#hig input').checkboxradio('disable');
+	// 	var a=new Array('0','0','0');
+	// 	function chkswitch(id,n,selector){
+	// 		$(id).change(function(event) {
+	// 			a[n]++;
+	// 			if(a[n]%2==1){
+	// 				$(selector).checkboxradio('enable');
+	// 			}
+	// 			else{
+	// 				$(selector).checkboxradio('disable');
+	// 			}
+	// 		});
+	// 	}
+	// 	chkswitch('#primary','0','#pri input');
+	// 	chkswitch('#middle','1','.mid input');
+	// 	chkswitch('#high','2','#hig input');
+	// })
+	$(document).on('pagebeforecreate',function(){
+		$('input').attr('data-role','none');
+	});
+	$(document).on('pageinit',function(){
+		$('#mask').css('height',$(document).height()+'px');
+		// $('body').css('overflow','hidden');
 	})
+	function mob_hover(){
+		$('.content1 li').touchstart(function(){
+			$(this).addClass('active');
+		});
+		$('.content1 li').touchend(function(){
+			$(this).removeClass('active');
+		});
+	}
+	function radio_imi(){
+		for(var i=0;i<3;i++){
+			(function(num){
+				$('.radioimi').eq(num).tap(function(){
+					$('#mask').show();
+					$('.radio_form').eq(num).show();
+					$(this).addClass('special');			
+				});
+			})(i);
+		}
+		
+		$('.radio_form li').tap(function(){
+			var tmpmsg=$(this).html();
+			$('#mask').hide();
+			$('.content1 ul').hide();
+			$('.special input').val(tmpmsg);
+			$('.special').removeClass('special')
+		})
+	}
+	mob_hover();
+	radio_imi();
 </script>
 </html>
