@@ -55,116 +55,23 @@
                 		<input type="text" class="aui-input" value="高中" />
 					</li>
 				</ul>
-				<ul>
-					<!-- 性别选择 -->
-					<li class="aui-input-row">
-						<label for="man">男</label>
-						<input type="radio" id="man" name="gender" checked>
-						<label for="woman">女</label>
-						<input type="radio" id="woman" name="gender">
-					</li>
-					<li id="job_wra">
-						<legend>身份类型：</legend>
-						<label for="teac">教师</label>
-						<input type="radio" id="teac" name="job">
-						<label for="unteac">非教师</label>
-						<input type="radio" id="unteac" name="job" checked>
-					</li>
-					<div style="clear:both;"></div>
-					<!-- 学历选择 -->
-					<li>
-						<legend>学历等级：</legend>
-						<label for="gz">高中</label>
-						<input type="radio" name="graduate" id="gz">
-						<label for="dz">大专</label>
-						<input type="radio" name="graduate" id="dz">
-						<label for="dx">大学</label>
-						<input type="radio" name="graduate" id="dx" checked>
-					</li>
-				</ul>
-			</form>
-			<form>
-				<h2>教学科目</h2>
-				<ul id="cm1">
+				<p class="aui-padded-10 aui-text-center">教学科目</p>				
+				<ul class="aui-form">					
 					<!-- 勾选小学，初中，高中分别显示对应列表 -->
-					<li>
-						<label for="primary">小学</label>
-						<input type="checkbox" name="rank" id="primary">
-						<fieldset data-role="controlgroup" data-type="horizontal" id="pri">
-							<label for="chk11">语文</label>
-							<input type="checkbox" id="chk11">		
-							<label for="chk12">数学</label>
-							<input type="checkbox" id="chk12">		
-							<label for="chk13">英语</label>
-							<input type="checkbox" id="chk13">
-						</fieldset>
+					<li class="chkimi aui-input-row">
+						<h3>小学：</h3>
+						<span>语文</span>						
 					</li>
-					<li>
-						<label for="middle">初中</label>
-						<input type="checkbox" name="rank" id="middle">
-						<fieldset data-role="controlgroup" data-type="horizontal" class="mid">	
-							<label for="chk21">语文</label>
-							<input type="checkbox" id="chk21">
-						
-							<label for="chk22">数学</label>
-							<input type="checkbox" id="chk22">
-						
-							<label for="chk23">英语</label>
-							<input type="checkbox" id="chk23">						
-						
-							<label for="chk24">物理</label>
-							<input type="checkbox" id="chk24">
-						
-							<label for="chk25">化学</label>
-							<input type="checkbox" id="chk25">
-						
-							<label for="chk26">生物</label>
-							<input type="checkbox" id="chk26">
-						
-							<label for="chk27">政治</label>
-							<input type="checkbox" id="chk27">
-						
-							<label for="chk28">历史</label>
-							<input type="checkbox" id="chk28">
-						
-							<label for="chk29">地理</label>
-							<input type="checkbox" id="chk29">
-						</fieldset>
+					<li class="chkimi aui-input-row">
+						<h3>初中：</h3>
+						<span>语文</span>						
 					</li>
-					<li>
-						<label for="high">高中</label>
-						<input type="checkbox" name="rank" id="high">
-						<fieldset data-role="controlgroup" data-type="horizontal" id="hig">	
-							<label for="chk31">语文</label>
-							<input type="checkbox" id="chk31">
-						
-							<label for="chk32">数学</label>
-							<input type="checkbox" id="chk32">
-						
-							<label for="chk33">英语</label>
-							<input type="checkbox" id="chk33">
-						
-							<label for="chk34">物理</label>
-							<input type="checkbox" id="chk34">
-						
-							<label for="chk35">化学</label>
-							<input type="checkbox" id="chk35">
-						
-							<label for="chk36">生物</label>
-							<input type="checkbox" id="chk36">
-						
-							<label for="chk37">政治</label>
-							<input type="checkbox" id="chk37">
-						
-							<label for="chk38">历史</label>
-							<input type="checkbox" id="chk38">
-						
-							<label for="chk39">地理</label>
-							<input type="checkbox" id="chk39">
-						</fieldset>
+					<li class="chkimi aui-input-row">
+						<h3>高中：</h3>
+						<span>语文</span>						
 					</li>
 				</ul>
-				<input type="submit" value="提交" class="mySub" data-role="none">
+				<input type="submit" value="提交" class="aui-btn aui-btn-primary aui-btn-block mySub" data-role="none">
 			</form>
 		</div>
 		<div data-role="panel" data-position="right" data-position-fixed="true" data-display="reveal" id="right_panel">
@@ -190,6 +97,106 @@
 					<li>高中</li>
 					<li>初中</li>
 					<li>小学</li>
+				</ul>
+				<!-- 初中科目 -->
+				<ul class="aui-form chk_form">
+					<li class="aui-input-row">
+						<label class="aui-input-addon">语文</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">数学</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">英语</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li>
+						<button class="aui-btn aui-btn-primary aui-btn-block" data-role="none">确定</button>
+					</li>		
+				</ul>
+				<ul class="aui-form chk_form">
+					<li class="aui-input-row">
+						<label class="aui-input-addon">语文</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">数学</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">英语</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">物理</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">化学</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">生物</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">政治</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">历史</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">地理</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li>
+						<button class="aui-btn aui-btn-primary aui-btn-block" data-role="none">确定</button>
+					</li>		
+				</ul>
+				<ul class="aui-form chk_form">
+					<li class="aui-input-row">
+						<label class="aui-input-addon">语文</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">数学</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">英语</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">物理</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">化学</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">生物</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">政治</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">历史</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li class="aui-input-row">
+						<label class="aui-input-addon">地理</label>
+						<input class="aui-pull-right aui-checkbox" type="checkbox">
+					</li>
+					<li>
+						<button class="aui-btn aui-btn-primary aui-btn-block" data-role="none" id="test">确定</button>
+					</li>		
 				</ul>
 			</div>
 		</div>
@@ -218,8 +225,7 @@
 		$('input').attr('data-role','none');
 	});
 	$(document).on('pageinit',function(){
-		$('#mask').css('height',$(document).height()+'px');
-		// $('body').css('overflow','hidden');
+		$('#mask').css('height',$(document).height()+'px');		
 	})
 	function mob_hover(){
 		$('.content1 li').touchstart(function(){
@@ -235,7 +241,8 @@
 				$('.radioimi').eq(num).tap(function(){
 					$('#mask').show();
 					$('.radio_form').eq(num).show();
-					$(this).addClass('special');			
+					$(this).addClass('special');
+					$('body').addClass('freeze');			
 				});
 			})(i);
 		}
@@ -246,9 +253,28 @@
 			$('.content1 ul').hide();
 			$('.special input').val(tmpmsg);
 			$('.special').removeClass('special')
+			$('body').removeClass('freeze');
+		})
+	}
+	function chk_imi(){
+		var glo;
+		for(var i=0;i<3;i++){
+			(function(num){
+				$('.chkimi').eq(num).tap(function(){
+					$('#mask').show();
+					$('.chk_form').eq(num).show().addClass('spe');
+					$(this).addClass('special');
+					$('body').addClass('freeze');								
+				});
+			})(i);
+		}
+		$('#test').tap(function(){
+			$('#mask').hide();
+			console.log('1');
 		})
 	}
 	mob_hover();
-	radio_imi();
+	// radio_imi();
+	chk_imi();
 </script>
 </html>

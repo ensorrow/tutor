@@ -105,16 +105,57 @@
 	z-index: 1000;
 	background-color: #fff;
 }
-.content1 li{
-	height: 2em;
+.radio_form li{
+	height: 2.6em;
 	font-size: 1.2em;
 	border-bottom: 1px solid #ddd;
 	text-align: center;
-	line-height: 2em;
+	line-height: 2.6em;
 }
 .content1 ul{
 	display: none;
 }
 .content1 li.active{
 	background-color: #eee;
+}
+.freeze{
+	overflow: hidden;
+}
+#mask label{
+	font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #333;
+    text-align: center;
+    display: table-cell;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 5px;
+}
+#mask button{
+	padding: 13.5px 0;
+	border-radius: 0;
+}
+#main .chkimi{
+	width: 100%;
+}
+#main .chkimi h3{
+	display: inline-block;
+	font-weight: 700;
+	padding: 10px 15px 10px 5px;
+	font-size: 14px;
+}
+#main .chkimi span{
+	display: inline-block;
+	padding: 3px 20px 3px 6px;
+	margin-left: 6px;
+	color: #666;
+	background: url(../images/close2.png) #ddd no-repeat right;
+	background-size: 18px;
+}
+#main .mySub{
+	width: 80%;
+	margin: 20px auto;
+	padding: 13.5px 0;
 }
