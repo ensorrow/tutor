@@ -57,7 +57,7 @@
 				</ul>
 				<p class="aui-padded-10 aui-text-center">教学科目</p>				
 				<ul class="aui-form">					
-					<!-- 勾选小学，初中，高中分别显示对应列表 -->
+					<!-- 点击小学，初中，高中分别显示对应列表 -->
 					<li class="chkimi aui-input-row">
 						<h3>小学：</h3>
 						<span>语文</span>						
@@ -238,7 +238,7 @@
 	function radio_imi(){
 		for(var i=0;i<3;i++){
 			(function(num){
-				$('.radioimi').eq(num).tap(function(){
+				$('.radioimi').eq(num).click(function(){
 					$('#mask').show();
 					$('.radio_form').eq(num).show();
 					$(this).addClass('special');
@@ -247,7 +247,7 @@
 			})(i);
 		}
 		
-		$('.radio_form li').tap(function(){
+		$('.radio_form li').click(function(){
 			var tmpmsg=$(this).html();
 			$('#mask').hide();
 			$('.content1 ul').hide();
@@ -257,24 +257,47 @@
 		})
 	}
 	function chk_imi(){
-		var glo;
 		for(var i=0;i<3;i++){
 			(function(num){
-				$('.chkimi').eq(num).tap(function(){
+				$('.chkimi').eq(num).click(function(){
 					$('#mask').show();
 					$('.chk_form').eq(num).show().addClass('spe');
 					$(this).addClass('special');
 					$('body').addClass('freeze');								
 				});
 			})(i);
-		}
-		$('#test').tap(function(){
+		}		
+	}
+	function close_chk(){
+		$('.chk_form button').click(function(){	
+			show_chk();		
+			$('.spe').hide().removeClass('spe');
 			$('#mask').hide();
-			console.log('1');
+			$('body').removeClass('freeze');
 		})
 	}
+	console.log($('.chk_form li').length)
+	function show_chk(){
+		for(var i=0;i<3;i++){
+			(function(num){
+				for(var j=0;j<6;j++){
+					(function(num2){
+						if($('.chk_form').eq(num).find('input').eq(num2).attr('checked')==true){
+							var tmp=$(this).siblings('label').val();
+							tmp='<span>'+tmp+'</span>';
+							$('chk_imi').eq(num).append(tmp);
+							
+						}
+						console.log(tmp);
+					})(j);
+				}
+			})(i);
+		}
+	}
 	mob_hover();
-	// radio_imi();
+	radio_imi();
 	chk_imi();
+	close_chk();
+	
 </script>
 </html>

@@ -52,9 +52,7 @@
 #header_wra{
 	width: 100%;
 	height: 100px;
-	background: url(../images/per_bg.jpg) no-repeat center;
-	background-size: cover;
-	-webkit-background-size: cover;
+	background: #1abc9c;
 }
 .my-gridc1{
 	width: 36%;
@@ -71,7 +69,7 @@
 	height: 70px;
 	border: 5px solid #ebeaea;
 	border-radius: 50px;
-	margin: 10px auto;
+	margin: 14px auto;
 	box-shadow: 0 0 3px #999;
 	position: relative;
 	z-index: 1;
@@ -83,11 +81,12 @@
 	padding-top: 15px;
 }
 #header_wra h1,#header_wra h2{
-	color: #d5d5d5;
+	color: #eee;
 	font-size: 16px;
+	line-height: 1.9em;
 }
 #header_wra hgroup span{
-	color: #ababab;
+	color: #fff;
 }
 #mask{
 	background-color: rgba(0,0,0,0.3);
@@ -157,5 +156,5 @@
 #main .mySub{
 	width: 80%;
 	margin: 20px auto;
-	padding: 13.5px 0;
+	padding: 7.5px 0;
 }
