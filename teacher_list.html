@@ -60,15 +60,15 @@
 					<!-- 点击小学，初中，高中分别显示对应列表 -->
 					<li class="chkimi aui-input-row">
 						<h3>小学：</h3>
-						<span>语文</span>						
+						<!--动态插入-->						
 					</li>
 					<li class="chkimi aui-input-row">
 						<h3>初中：</h3>
-						<span>语文</span>						
+						<!--动态插入-->						
 					</li>
 					<li class="chkimi aui-input-row">
 						<h3>高中：</h3>
-						<span>语文</span>						
+						<!--动态插入-->						
 					</li>
 				</ul>
 				<input type="submit" value="提交" class="aui-btn aui-btn-primary aui-btn-block mySub" data-role="none">
@@ -269,29 +269,26 @@
 		}		
 	}
 	function close_chk(){
-		$('.chk_form button').click(function(){	
-			show_chk();		
-			$('.spe').hide().removeClass('spe');
-			$('#mask').hide();
-			$('body').removeClass('freeze');
-		})
-	}
-	console.log($('.chk_form li').length)
-	function show_chk(){
 		for(var i=0;i<3;i++){
 			(function(num){
-				for(var j=0;j<6;j++){
-					(function(num2){
-						if($('.chk_form').eq(num).find('input').eq(num2).attr('checked')==true){
-							var tmp=$(this).siblings('label').val();
-							tmp='<span>'+tmp+'</span>';
-							$('chk_imi').eq(num).append(tmp);
-							
-						}
-						console.log(tmp);
-					})(j);
-				}
+				$('.chk_form').eq(num).find('button').click(function(){	
+					$('.special').children('span').remove().end().removeClass('special');
+					show_chk(num);		
+					$('.spe').hide().removeClass('spe');
+					$('#mask').hide();
+					$('body').removeClass('freeze');
+				})
 			})(i);
+		}
+	}
+	function show_chk(i){
+		for(var j=0;j<$('.chk_form').eq(i).find('input').length;j++){
+			var tmpobj=$('.chk_form').eq(i).find('input').eq(j);
+			if(tmpobj.is(':checked')){
+				var tmp=tmpobj.siblings('label').html();
+				tmp='<span>'+tmp+'</span>';						
+				$('.chkimi').eq(i).append(tmp);
+			}
 		}
 	}
 	mob_hover();
