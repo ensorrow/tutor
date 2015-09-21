@@ -158,3 +158,14 @@
 	margin: 20px auto;
 	padding: 7.5px 0;
 }
+#file_upload input{
+	position: absolute;
+	left: 0;
+	opacity: 0;
+}
+#file_upload button{
+	margin: 4px 5px;
+}
+.aui-form .aui-input-row{
+	width:100%;
+}
