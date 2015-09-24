@@ -18,8 +18,8 @@
 			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
 			<div data-role="navbar" id="nav">
 				<ul>
-					<li><a href="#" class="active">目前状况</a></li>
-					<li><a href="update2.html">升级路线</a></li>
+					<li><a href="update.html">目前状况</a></li>
+					<li><a href="#"  class="active">升级路线</a></li>
 				</ul>
 			</div>
 		</div>
@@ -45,24 +45,38 @@
 			</div>
 			<div id="grid_wra">
 				<div id="grid">
-					<ul>
+					<ul id="up2">
 						<li>
-							<h1><span>7/24</span>&nbsp&nbsp获得经验:<span class="exp">5</span></h1>
-							<h2>三角函数教学:<span class="exp">5</span></h2>
-							<h2>部分立体几何题辅导:<span class="exp">5</span></h2>
+							<h1>今日授课:2小时 <span class="exp">+10分</span></h1>
+							<h2>今日点评:+5<span class="exp">+0.5分</span></h2>					
+							<section>
+								<h3>2015/4/30</h3>
+								<h4>+9.5分</h4>
+							</section>
 						</li>
 						<li>
-							<h1><span>7/24</span>&nbsp&nbsp获得经验:<span class="exp">5</span></h1>
-							<h2>三角函数教学:<span class="exp">5</span></h2>
+							<h1>今日授课:旷课 <span class="exp expd">-30分</span></h1>
+							<h2>今日点评:+5<span class="exp">+0.5分</span></h2>
+							<section>
+								<h3>2015/4/30</h3>
+								<h4>+9.5分</h4>
+							</section>
 						</li>
 						<li>
-							<h1><span>7/24</span>&nbsp&nbsp获得经验:<span class="exp">5</span></h1>
-							<h2>三角函数教学:<span class="exp">5</span></h2>
-							<h2>部分立体几何题辅导:<span class="exp">5</span></h2>
+							<h1>今日授课:迟到 <span class="exp expd">-20分</span></h1>
+							<h2>今日点评:+5<span class="exp">+0.5分</span></h2>					
+							<section class="expd">
+								<h3>2015/4/30</h3>
+								<h4>-9.5分</h4>
+							</section>
 						</li>
 						<li>
-							<h1><span>7/24</span>&nbsp&nbsp获得经验:<span class="exp">5</span></h1>
-							<h2>三角函数教学:<span class="exp">5</span></h2>
+							<h1>今日拒绝订单 <span class="exp expd">-50分</span></h1>
+							<h2>今日点评:+5<span class="exp">+0.5分</span></h2>
+							<section>
+								<h3>2015/4/30</h3>
+								<h4>+9.5分</h4>
+							</section>
 						</li>
 						<div id="draw_line"></div>
 						<img src="images/tl_icon.png">
@@ -86,12 +100,12 @@
 <script type="text/javascript">
 	$(document).on('pagecreate',function(){
 		var len=$('#grid li').length;
-		var wid=150+130*len-80;
+		var wid=150+180*len-80;
 		console.log(wid);
 		$('#draw_line').css('width',wid+'px');
-		$('#grid ul').css('width',249+130*len+'px');
+		$('#grid ul').css('width',249+180*len+'px');
 		for(var i=0;i<len;i++){
-			$('#grid li').eq(i).css('left',10+130*i+'px');
+			$('#grid li').eq(i).css('left',10+180*i+'px');
 		}
 	});
 </script>

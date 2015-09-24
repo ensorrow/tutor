@@ -222,6 +222,7 @@
 	box-shadow: 1px 1px 1px #3892c2;
 	position: absolute;
 	z-index: 2;
+	min-height: 50px;
 }
 #draw_line{
 	content: '';
@@ -279,15 +280,43 @@
 	padding-bottom: 5px;
 	margin-bottom: 5px;
 }
+#up2 li span.exp{
+	float: right;
+	margin-left: 20px;
+}
+#up2 li span.expd{
+	color: #e64e12;
+}
 #grid li h2{
 	font-size: 16px;
 }
 #grid .exp{
-	color: #ffa934;
+	color: #21e70d;
 }
 #grid img{
 	position: absolute;
 	top: 50%;
 	margin-top: -18px;
 	right: 10px;
+}
+#grid li section{
+	position: absolute;
+	padding: .5em 1em;
+	background-color: #fff;
+	border-left: 5px solid #80c269;
+	left: 50%;
+	margin-left: -54px;
+}
+#grid li section.expd{
+	border-left: 5px solid #d55320;
+}
+#grid li:nth-child(odd) section{	
+	top: 110px;	
+}
+#grid li:nth-child(even) section{
+	bottom: 110px;
+}
+#grid section h3,#grid section h4{
+	font-size: 14px;
+	color: #000;
 }
