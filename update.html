@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-	<title>Untitled Document</title>
+	<title>当前状况</title>
 	<link rel="stylesheet" href="css/themes/myapp.min.css" />
   	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
@@ -19,7 +19,7 @@
 			<div data-role="navbar" id="nav">
 				<ul>
 					<li><a href="#" class="active">目前状况</a></li>
-					<li><a href="update2.html">升级路线</a></li>
+					<li><a href="update2.html" rel="external">升级路线</a></li>
 				</ul>
 			</div>
 		</div>
@@ -84,7 +84,7 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript">
-	$(document).on('pagecreate',function(){
+	$(document).on('pageinit',function(){
 		var len=$('#grid li').length;
 		var wid=150+130*len-80;
 		console.log(wid);
