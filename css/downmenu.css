@@ -76,6 +76,9 @@
 #nav a.ui-btn:after{
 	background-image: url(../images/down_icon.png);
 }
+#nav a.active:after{
+	background-image: url(../images/up_icon.png);
+}
 #nav .submenu{
 	display: none;
 	position: absolute;

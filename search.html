@@ -19,7 +19,7 @@
 			<div data-role="navbar" id="nav">
 			<ul>
 				<li class="navli">
-					<a href="javascript" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-d ui-btn-icon-right">年级</a>
+					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-d ui-btn-icon-right">年级</a>
 					<ul class="submenu sub1">
 						<li class="active sub_gra">小学
 							<ul class="grade pri">
@@ -157,33 +157,29 @@
 </body>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
-<script type="text/javascript">
-	$('#nav a.ui-shadow').click(function(){
-			return false;
-		});
-	function close1(obj){
-		$(document).click(function(e){
-			var target=e.target;
-			if(obj.get(0)!==target&&!$.contains(obj.get(0),target)){
-				obj.hide();
-			}
-		})
-	}
-	close1($('.sub1'));
-	close1($('.sub2'));
-	close1($('.sub3'));		
+<script type="text/javascript">		
 	for(var i=0;i<3;i++){
-		$('.navli').eq(i).children('a').tap(function(){
-			$('.submenu').hide();
-			$(this).siblings('.submenu').toggle();
-		})
-		$('li.sub_gra').eq(i).tap(function(){
+		
+		(function(num){
+			$('.navli').eq(num).children('a').click(function(){
+				// $('.submenu').hide();
+				// console.log(num);
+				// $(this).siblings('.submenu').toggle().end().toggleClass('active');
+				$(this).toggleClass('active');
+				$('.submenu').eq(num).toggle();
+				for(var j=0;j<3;j++){
+					if (j!=num) {$('.submenu').eq(j).hide();$('.navli').eq(j).children('a').removeClass('active')};
+				}
+				return false;
+			})
+		})(i)
+		$('li.sub_gra').eq(i).click(function(){
 			$(this).siblings('li.sub_gra').children('ul').hide().end().removeClass('active');
 			$(this).children('ul').show().end().addClass('active');
 		})
 	}
 	(function(obj){
-		obj.tap(function(){
+		obj.click(function(){
 			$(this).siblings('li').removeClass('active');
 			$(this).addClass('active');
 		})
@@ -192,7 +188,7 @@
 	function formImitate(obj){
 		var msg='';
 		for(var j=0;j<obj.children('li').size();j++){			
-			obj.children('li').eq(j).tap(function(){
+			obj.children('li').eq(j).click(function(){
 				$(this).siblings('li').removeClass('active');
 				$(this).addClass('active');
 				msg='';
@@ -205,6 +201,17 @@
 	}
 	for(var k=0;k<3;k++){
 		formImitate($('.grade').eq(k));
+	}	
+	function close1(obj){
+		$(document).click(function(e){
+			var target=e.target;
+			if(obj.get(0)!==target&&!$.contains(obj.get(0),target)){
+				obj.hide();
+			}
+		})
 	}
+	close1($('.sub1'));
+	close1($('.sub2'));
+	close1($('.sub3'));
 </script>
 </html>
