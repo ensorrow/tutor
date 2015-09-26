@@ -7,7 +7,7 @@
 	-webkit-background-size: cover;
 }
 #cen_group{	
-	width: 75%;
+	width: 70%;
 	margin: 0 auto;
 	margin-top: 125px;
 }
@@ -30,15 +30,16 @@
 }
 #cen_group input{
 	font-size: 16px;
-	padding: 10px 0;
+	padding: 7px 0;
 	border: 0;
 	padding-left: 40px;	
-	background-size: 20px;
+	background-size: 16px;
 }
 #cen_group .ui-input-btn{
 	background-color: #72cfbc;
 	border: 0;
 	color: #fff;
+	margin-bottom: 10px;
 }
 #cen_group h1{
 	font-size: 16px;
@@ -74,8 +75,8 @@
 	position: absolute;
 }
 .ui-block-a a{
-	right: 20px;
+	right: 10px;
 }
 .ui-block-b a{
-	left: 20px;
+	left: 10px;
 }
