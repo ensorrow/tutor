@@ -9,18 +9,18 @@
 #cen_group{	
 	width: 70%;
 	margin: 0 auto;
-	margin-top: 125px;
+	margin-top: 108px;
 }
 #cen_group .ui-input-text,#cen_group .ui-input-btn{
 	border-radius: 35px;
-	margin-bottom: 30px;
+	margin-bottom: 28px;
 	border: 0;
 	position: relative;
 }
 #cen_group .ui-input-text label{
 	position: absolute;
 	left: 9px;
-	top: 45px;
+	top: 38px;
 	font-size: 12px;
 	line-height: 20px;
 	color: red;
@@ -40,6 +40,7 @@
 	border: 0;
 	color: #fff;
 	margin-bottom: 10px;
+	margin-top: 50px;
 }
 #cen_group h1{
 	font-size: 16px;
@@ -63,7 +64,7 @@
 	background: url(../images/lock.png) no-repeat 10px;
 }
 .ui-block-a,.ui-block-b{position: relative;height: 35px;}
-.ui-grid-a a{
+#page .ui-grid-a a{
 	display: block;
 	text-decoration: none;
 	padding: 5px 10px;
