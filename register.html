@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-	<title>教师端登录</title>
+	<title>教师端注册</title>
 	<link rel="stylesheet" href="css/themes/myapp.min.css" />
   	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
@@ -12,21 +12,17 @@
 <body>
 	<div data-role="page" id="page">
 		<div id="cen_group">
-			<h1>教师端登录</h1>
-			<form id="loginform">
+			<h1>教师端注册</h1>
+			<form id="registerform">
 				<input type="text" placeholder="账号" id="username" name="username">
 				<input type="password" placeholder="密码" name="password" id="password">
-				<input type="submit" value="登录账户">
+				<input type="password" placeholder="再次输入密码" name="confirm" id="confirm">
+				<input type="submit" value="注册账户">
 			</form>
 		</div>
-		<div class="ui-grid-a">
-			<div class="ui-block-a">
-				<a href="#">忘记账号？</a>
-			</div>
-			<div class="ui-block-b">
-				<a href="#">注册账号</a>
-			</div>
-		</div>
+		<section style="text-align:center;font-size:14px;">
+			<a href="login.html" rel="external">已有账号？点击登录</a>
+		</section>
 	</div>
 </body>
 <script src="js/jquery.min.js"></script>

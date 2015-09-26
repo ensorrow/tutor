@@ -13,8 +13,20 @@
 }
 #cen_group .ui-input-text,#cen_group .ui-input-btn{
 	border-radius: 35px;
-	margin-bottom: 26px;
+	margin-bottom: 30px;
 	border: 0;
+	position: relative;
+}
+#cen_group .ui-input-text label{
+	position: absolute;
+	left: 9px;
+	top: 45px;
+	font-size: 12px;
+	line-height: 20px;
+	color: red;
+	padding-left: 20px;
+	background: url(../images/wrong.gif) left no-repeat;
+	background-size: 20px; 
 }
 #cen_group input{
 	font-size: 16px;
@@ -43,10 +55,10 @@
 	left: 74px;
 	top: 12px;
 }
-#account{
+#username{
 	background: url(../images/acc.png) no-repeat 10px;
 }
-#password{
+#password,#confirm{
 	background: url(../images/lock.png) no-repeat 10px;
 }
 .ui-block-a,.ui-block-b{position: relative;height: 35px;}
