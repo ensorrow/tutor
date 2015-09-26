@@ -224,7 +224,7 @@ body{
 }
 #chatinput input[type=text]{
 	margin: 0;
-	padding: 8px 15px;
+	padding: 8px 5px;
 }
 #chatinput div:last-child{
 	width: 20%;
