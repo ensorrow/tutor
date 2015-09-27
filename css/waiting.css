@@ -35,10 +35,9 @@
 	top: 50%;
 	margin-top: -15px;
 }
-.mytitle{
-	color: #fff;
-	font-size: 20px!important;
-	padding: .7em 0 .3em 0!important;
+#page .mytitle{
+	margin: 0;
+	padding: .9em 0;
 }
 .myback::after{
 	background: url(../images/back.gif) no-repeat left;

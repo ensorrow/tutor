@@ -23,10 +23,9 @@
 .ui-content{
 	padding: 0;
 }
-.mytitle{
-	color: #fff;
-	font-size: 20px!important;
-	padding: .7em 0 .3em 0!important;
+#page1 .mytitle,#page2 .mytitle{
+	margin: 0;
+	padding: .9em 0;
 }
 .ui-btn-trans{
 	background-color: rgba(0,0,0,0)!important;

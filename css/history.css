@@ -19,10 +19,9 @@ body{
 .myheader{
 	height: 46px;
 }
-.mytitle{
-	color: #fff;
-	font-size: 20px!important;
-	padding: .7em 0 .3em 0!important;
+#header_color .mytitle{
+	margin: 0;
+	padding: .9em 0;
 }
 #header_color{
 	border: 0;
