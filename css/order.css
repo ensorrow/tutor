@@ -10,9 +10,6 @@
 .ui-content{
 	padding: 0;
 }
-.myheader{
-	height: 46px;
-}
 #header_color .mytitle{
 	margin: 0;
 	padding: .8em 0;
@@ -97,9 +94,6 @@
 }
 .ui-navbar li:last-child{
 	border-left: 1px solid #ffffff;
-}
-#main{
-	margin-top: 38.5px;
 }
 #main .message{
 	padding-right: 20px;
