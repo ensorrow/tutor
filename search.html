@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/downmenu.css">
 	<link rel="stylesheet" type="text/css" href="css/panel.css">
+	<link rel="stylesheet" type="text/css" href="css/aui.css">
 </head>
 <body>
 	<div data-role="page" id="page1">
@@ -142,8 +143,50 @@
 						<span class="distance">3.0km</span>						
 					</a>					
 				</li>
-			</ul>			
+			</ul>
+						
 		</div>
+		<div id="mask">
+				<div class="content1">
+					 <ul class="aui-form">
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">教师姓名：</label>
+					 		<input type="text" class="aui-input" value="吕哲扬" disabled>
+					 	</li>
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">毕业在读院校：</label>
+					 		<input type="text" class="aui-input" value="西安交大">
+					 	</li>
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">性别：</label>
+					 		<input type="text" class="disabled aui-input" value="男" disabled>
+					 	</li>
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">住址：</label>
+					 		<input type="text" class="disabled aui-input" value="西安市西安交大仲英书院405">
+					 	</li>
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">等级：</label>
+					 		<input type="text" class="aui-input" value="5">
+					 	</li>
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">累计教学时长：</label>
+					 		<input type="text" class="aui-input disabled" value="5小时" disabled>
+					 	</li>
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">单价：</label>
+					 		<input type="text" class="aui-input" value="50元/h">
+					 	</li>
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">教学科目：</label>
+					 		<input type="text" class="aui-input" value="小学语文，初中数学">
+					 	</li>
+					 	<li class="aui-input-row">
+					 		<input type="submit" class="aui-btn aui-btn-primary aui-btn-block mySub" value="发送简历">
+					 	</li>
+					 </ul>
+				</div>
+			</div>
 		<div data-role="panel" data-position="right" data-position-fixed="true" data-display="reveal" id="right_panel">
 			<h2><img src="images/head_sam.gif"></h2>
 			<h1>袁拓</h1>
@@ -158,13 +201,9 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript">		
-	for(var i=0;i<3;i++){
-		
+	for(var i=0;i<3;i++){	
 		(function(num){
 			$('.navli').eq(num).children('a').click(function(){
-				// $('.submenu').hide();
-				// console.log(num);
-				// $(this).siblings('.submenu').toggle().end().toggleClass('active');
 				$(this).toggleClass('active');
 				$('.submenu').eq(num).toggle();
 				for(var j=0;j<3;j++){
@@ -212,6 +251,26 @@
 	}
 	close1($('.sub1'));
 	close1($('.sub2'));
-	close1($('.sub3'));
+	close1($('.sub3'));	
+	function closeMask(obj){
+		$('#mask').click(function(e){
+			var target=e.target;
+			if(obj.get(0)!==target&&!$.contains(obj.get(0),target)){
+				$('#mask').hide('500');
+			}
+		})
+	}	
+	$(document).on('pagebeforecreate',function(){
+		$('#mask input').attr('data-role','none');
+	});
+	$(document).on('pageinit',function(){
+		$('#mask').css('height',$(document).height()+'px');		
+	})
+	$('#main li').each(function(){
+		$(this).click(function(){
+			$('#mask').show('1000',function(){closeMask($('.content1'));});
+		})
+	})
+	
 </script>
 </html>
