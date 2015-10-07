@@ -173,9 +173,10 @@ body{
 	display: block;
 	clear: both;
 }
-/*msg_detail.html*/
+/*对话框*/
 #dialog{
-	background: #ddd!important;
+	background-color: rgba(0,0,0,.3)!important;
+	z-index: 1001;
 }
 #dialog .ui-dialog-contain{
 	border-radius: 9px;
