@@ -214,11 +214,6 @@ $('#main').dropload({
             success: function(data){
                 var result = '';
                 for(var i = 0; i < data.lists.length; i++){
-                    // result +=   '<a class="item opacity" href="'+data.lists[i].link+'">'
-                    //                 +'<img src="'+data.lists[i].pic+'" alt="">'
-                    //                 +'<h3>'+data.lists[i].title+'</h3>'
-                    //                 +'<span class="date">'+data.lists[i].date+'</span>'
-                    //             +'</a>';
                     result +=   '<li><a href="'+data.lists[i].link+'">'
                                     +'<img src="'+data.lists[i].pic+'" alt="">'
                                     +'<h1>'+data.lists[i].name+'</h1>'
@@ -232,6 +227,7 @@ $('#main').dropload({
                 // 为了测试，延迟1秒加载
                 setTimeout(function(){
                     $('.lists').append(result).listview("refresh");
+                    showMask();
                     me.resetload();
                 },1000);
             },
@@ -266,24 +262,7 @@ $('#main').dropload({
 			$(this).addClass('active');
 		})
 	})($('.sub2 li,.sub3 li'))
-
-	function formImitate(obj){
-		var msg='';
-		for(var j=0;j<obj.children('li').size();j++){			
-			obj.children('li').eq(j).click(function(){
-				$(this).siblings('li').removeClass('active');
-				$(this).addClass('active');
-				msg='';
-				msg+=k;
-				msg+=$(this).index();
-				console.log(msg);
-			})
-		}
-			
-	}
-	for(var k=0;k<3;k++){
-		formImitate($('.grade').eq(k));
-	}	
+	
 	function close1(obj){
 		$(document).click(function(e){
 			var target=e.target;
@@ -302,18 +281,24 @@ $('#main').dropload({
 				$('#mask').hide('500');
 			}
 		})
+		$('#mask .mySub').click(function(){
+			$('#mask').hide();
+		})
 	}	
 	$(document).on('pagebeforecreate',function(){
 		$('#mask input').attr('data-role','none');
 	});
 	$(document).on('pageinit',function(){
-		$('#mask').css('height',$(document).height()+'px');		
+		$('#mask').css('height',$(document).height()+'px');
+		showMask();		
 	})
-	$('#main li').each(function(){
-		$(this).click(function(){
-			$('#mask').show('1000',function(){closeMask($('.content1'));});
+	function showMask(){
+		$('#main li').each(function(){
+			$(this).click(function(){
+				$('#mask').show('1000',function(){closeMask($('.content1'));});
+			})
 		})
-	})
+	}
 	
 </script>
 </html>
