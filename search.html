@@ -222,9 +222,11 @@ function refresh(){
                                     +'<span class="distance">'+data.lists[i].distance+'km</span>'
                                 +'</a></li>';
                 }
-                $('.lists').append(result).listview("refresh");
-                $('#refresh').removeClass('active');
-                showMask();               
+                setTimeout(function(){
+                	$('.lists').append(result).listview("refresh");
+                	$('#refresh').removeClass('active');
+                	showMask();
+                }, 1000)               
             },
             error: function(xhr, type){
                 alert('Ajax error!');
@@ -261,12 +263,12 @@ $('#main').dropload({
                                 +'</a></li>';
                 }
                 // 为了测试，延迟1秒加载
-                // setTimeout(function(){
-                    
-                // },1000);
-				$('.lists').append(result).listview("refresh");
-                showMask();
-                me.resetload();
+                setTimeout(function(){
+                    $('.lists').append(result).listview("refresh");
+	                showMask();
+	                me.resetload();
+                },1000);
+				
             },
             error: function(xhr, type){
                 alert('Ajax error!');
