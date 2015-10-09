@@ -278,3 +278,25 @@ form.ui-filterable{
 #mask input.disabled{
 	color: #a2a2a2;
 }
+#refresh{
+	width:3em;
+	height: 3em;
+	border-radius: 1.5em;
+	background: url(../images/refresh.png) no-repeat center;
+	background-size: 100%;
+	position: fixed;
+	right: 20px;
+	bottom: 40px;
+}
+#refresh.active{
+	animation: rotate infinite ease 1s;
+	-webkit-animation: rotate infinite ease 1s;
+}
+@keyframes rotate{
+	from{
+		transition: rotate(0deg);
+	}
+	to{
+		transition: rotate(360deg);
+	}
+}
