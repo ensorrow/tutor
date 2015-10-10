@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+	<title>教师申请</title>
+	<link rel="stylesheet" href="css/themes/myapp.min.css" />
+  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/teacher_list.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+	<link rel="stylesheet" type="text/css" href="css/aui.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	
+</head>
+<body>
+	<div data-role="page" id="page">
+		<div data-role="header" data-position="fixed" id="myhead">
+			<a href="#" data-rel="back" class="myback ui-btn-trans">返回</a>
+			<h1 class="mytitle">教师信息</h1>
+			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
+		</div>
+		<div data-role="content" id="main">
+			<div id="header_wra" class="my-grid">
+				<div class="my-gridc1">
+					<div class="cir_img_wrapper"><img src="images/head_sam.gif"></div>
+				</div>
+				<hgroup class="my-gridc2">
+					<h1>等级：<span>Lv2</span>&nbsp<span>小学老师</span></h1>
+					<h2>时长：<span>23小时</span></h2>
+				</hgroup>
+			</div>
+			<form>
+				<div>
+					<p class="aui-padded-10 aui-text-center">基本信息</p>
+					<ul class="aui-form">
+						<li class="aui-input-row">
+							<label class="aui-input-addon">姓名：</label>
+	                		<input type="text" class="aui-input" value="吕哲扬" />
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">毕业/在读院校：</label>
+	                		<input type="text" class="aui-input" value="西安交大" />
+						</li>
+						<li class="aui-input-row radioimi">
+							<label class="aui-input-addon">性别：</label>
+	                		<input type="text" class="aui-input" value="男" disabled/>
+						</li>
+						<li class="aui-input-row radioimi">
+							<label class="aui-input-addon">身份类型：</label>
+	                		<input type="text" class="aui-input" value="教师" disabled/>
+						</li>
+						<li class="aui-input-row radioimi">
+							<label class="aui-input-addon">学历等级：</label>
+	                		<input type="text" class="aui-input" value="高中" disabled/>
+						</li>
+					</ul>
+					<p class="aui-padded-10 aui-text-center">教学科目</p>				
+					<ul class="aui-form">					
+						<!-- 点击小学，初中，高中分别显示对应列表 -->
+						<li class="chkimi aui-input-row">
+							<h3>小学：</h3>
+							<!--动态插入-->						
+						</li>
+						<li class="chkimi aui-input-row">
+							<h3>初中：</h3>
+							<!--动态插入-->						
+						</li>
+						<li class="chkimi aui-input-row">
+							<h3>高中：</h3>
+							<!--动态插入-->						
+						</li>
+					</ul>
+					<p class="aui-padded-10 aui-text-center">上传照片</p>
+					<ul class="aui-form" id="file_upload">
+						<li class="aui-input-row">
+							<button class="aui-btn aui-btn-primary" data-role="none">上传图片1</button>
+							<input type="file" accept="image/*" id="loadFile1">
+							<span id="stuPic1"></span>
+						</li>
+						<li class="aui-input-row">
+							<button class="aui-btn aui-btn-primary" data-ajax="false" data-role="none">上传图片2</button>
+							<input type="file" accept="image/*" id="loadFile2">
+							<span id="stuPic2"></span>
+						</li>
+					</ul>
+					<input type="submit" value="提交" class="aui-btn aui-btn-primary aui-btn-block mySub" data-role="none">
+				</div>
+			</div>		
+			<div id="mask">
+				<div class="content1">
+					<ul class="radio_form">
+						<li>男
+							<input type="radio" value="0">
+						</li>
+						<li>女
+							<input type="radio" value="1">
+						</li>
+					</ul>
+					<ul class="radio_form">
+						<li>教师
+						<input type="radio" value="3"></li>
+						<li>非教师
+						<input type="radio" value="4"></li>
+					</ul>
+					<ul class="radio_form">
+						<li>高中
+						<input type="radio" value="5"></li>
+						<li>初中
+						<input type="radio" value="6"></li>
+						<li>小学
+						<input type="radio" value="7"></li>
+					</ul>
+					<!-- 初中科目 -->
+					<ul class="aui-form chk_form">
+						<li class="aui-input-row">
+							<label class="aui-input-addon">语文</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">数学</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">英语</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li>
+							<button class="aui-btn aui-btn-primary aui-btn-block" data-role="none">确定</button>
+						</li>		
+					</ul>
+					<ul class="aui-form chk_form">
+						<li class="aui-input-row">
+							<label class="aui-input-addon">语文</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">数学</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">英语</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">物理</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">化学</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">生物</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">政治</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">历史</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">地理</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li>
+							<button class="aui-btn aui-btn-primary aui-btn-block" data-role="none">确定</button>
+						</li>		
+					</ul>
+					<ul class="aui-form chk_form">
+						<li class="aui-input-row">
+							<label class="aui-input-addon">语文</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">数学</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">英语</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">物理</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">化学</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">生物</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">政治</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">历史</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li class="aui-input-row">
+							<label class="aui-input-addon">地理</label>
+							<input class="aui-pull-right aui-checkbox" type="checkbox">
+						</li>
+						<li>
+							<button class="aui-btn aui-btn-primary aui-btn-block" data-role="none" id="test">确定</button>
+						</li>		
+					</ul>
+				</div>
+			</div>
+		</form>
+		<div data-role="panel" data-position="right" data-position-fixed="true" data-display="reveal" id="right_panel">
+			<h2><img src="images/head_sam.gif"></h2>
+			<h1>袁拓</h1>
+			<ul id="sidelist">
+				<li><a href="#">返回首页</a></li>
+				<li><a href="#">更换账号</a></li>
+				<li><a href="#">退出登录</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	// $(document).ready(function(){
+	// 	$('.mid input,#pri input,#hig input').checkboxradio('disable');
+	// 	var a=new Array('0','0','0');
+	// 	function chkswitch(id,n,selector){
+	// 		$(id).change(function(event) {
+	// 			a[n]++;
+	// 			if(a[n]%2==1){
+	// 				$(selector).checkboxradio('enable');
+	// 			}
+	// 			else{
+	// 				$(selector).checkboxradio('disable');
+	// 			}
+	// 		});
+	// 	}
+	// 	chkswitch('#primary','0','#pri input');
+	// 	chkswitch('#middle','1','.mid input');
+	// 	chkswitch('#high','2','#hig input');
+	// })
+	$(document).on('pagebeforecreate',function(){
+		$('input').attr('data-role','none');
+	});
+	$(document).on('pageinit',function(){
+		$('#mask').css('height',$(document).height()+'px');		
+	})
+	function mob_hover(){
+		$('.content1 li').touchstart(function(){
+			$(this).addClass('active');
+		});
+		$('.content1 li').touchend(function(){
+			$(this).removeClass('active');
+		});
+	}
+	function radio_imi(){
+		for(var i=0;i<3;i++){
+			(function(num){
+				$('.radioimi').eq(num).click(function(event){
+					event.preventDefault();
+					$('#mask').show();
+					$('.radio_form').eq(num).show();
+					$(this).addClass('special');
+					$('body').addClass('freeze');
+					return false;			
+				});
+			})(i);
+		}
+		
+		$('.radio_form li').click(function(){
+			var tmpmsg=$(this).html();
+			$('#mask').hide();
+			$('.content1 ul').hide();
+			$('.special input').val(tmpmsg);
+			$('.special').removeClass('special')
+			$('body').removeClass('freeze');
+		})
+	}
+	function chk_imi(){
+		for(var i=0;i<3;i++){
+			(function(num){
+				$('.chkimi').eq(num).click(function(){
+					$('#mask').show();
+					$('.chk_form').eq(num).show().addClass('spe');
+					$(this).addClass('special');
+					$('body').addClass('freeze');								
+				});
+			})(i);
+		}		
+	}
+	function close_chk(){
+		for(var i=0;i<3;i++){
+			(function(num){
+				$('.chk_form').eq(num).find('button').click(function(){	
+					$('.special').children('span').remove().end().removeClass('special');
+					show_chk(num);		
+					$('.spe').hide().removeClass('spe');
+					$('#mask').hide();
+					$('body').removeClass('freeze');
+				})
+			})(i);
+		}
+	}
+	function show_chk(i){
+		for(var j=0;j<$('.chk_form').eq(i).find('input').length;j++){
+			var tmpobj=$('.chk_form').eq(i).find('input').eq(j);
+			if(tmpobj.is(':checked')){
+				var tmp=tmpobj.siblings('label').html();
+				tmp='<span>'+tmp+'</span>';						
+				$('.chkimi').eq(i).append(tmp);
+			}
+		}
+	}
+    function getFileName(path){
+		var pos1 = path.lastIndexOf('/');
+		var pos2 = path.lastIndexOf('\\');
+		var pos  = Math.max(pos1, pos2)
+		if( pos<0 )
+			return path;
+		else
+			return path.substring(pos+1);
+	}
+    $("#loadFile1").change(function () {  
+            var strSrc = this.value;    
+            //验证上传文件格式是否正确 
+            console.log(getFileName(strSrc)); 
+            // var pos = strSrc.lastIndexOf(".");  
+            // var lastname = strSrc.substring(pos, strSrc.length)  
+            // if (lastname.toLowerCase() != ".jpg") {  
+            //     alert("您上传的文件类型为" + lastname + "，图片必须为 JPG 类型");  
+            //     return false;  
+            // }  
+            $('#stuPic1').html(getFileName(strSrc)) //让图片显示在图片框里
+  	});
+  	$("#loadFile2").change(function () {  
+            var strSrc = this.value;    
+            console.log(getFileName(strSrc)); 
+            $('#stuPic2').html(getFileName(strSrc)) //让图片显示在图片框里
+  	});   
+	mob_hover();
+	radio_imi();
+	chk_imi();
+	close_chk();
+	
+</script>
+</html>
