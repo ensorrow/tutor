@@ -1,0 +1,61 @@
+#page .ui-content{
+	padding: 0;
+}
+#page{
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+}
+#content{
+	flex: 1;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: column;
+}
+#sec1,#sec2{
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+}
+#sec1{
+	background: #ee4638;
+	flex: 1;
+	justify-content: center;
+}
+#sec2{
+	flex-direction: column;
+	flex: 3;
+}
+#sec1 img{
+	width: 40%;
+	animation: rotate infinite ease 3s;
+	-webkit-animation: rotate infinite ease 3s;
+}
+#sec2 p{
+	margin-top: 2em;
+	margin-bottom: 3em;
+}
+#sec2 a{
+	display: block;
+	width: 6em;
+	height: 6em;
+	text-align: center;
+	line-height: 6em;
+	border-radius: 3em;
+	background: #eee;
+	box-shadow: 0 0 16px #ccc;
+	align-self: center;
+	text-decoration: none;
+}
+@keyframes rotate{
+	0%{
+		transform: rotate(0deg);
+	}
+	50%{
+		transform: rotate(-60deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+

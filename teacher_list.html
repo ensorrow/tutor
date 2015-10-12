@@ -218,24 +218,6 @@
 	</div>
 </body>
 <script type="text/javascript">
-	// $(document).ready(function(){
-	// 	$('.mid input,#pri input,#hig input').checkboxradio('disable');
-	// 	var a=new Array('0','0','0');
-	// 	function chkswitch(id,n,selector){
-	// 		$(id).change(function(event) {
-	// 			a[n]++;
-	// 			if(a[n]%2==1){
-	// 				$(selector).checkboxradio('enable');
-	// 			}
-	// 			else{
-	// 				$(selector).checkboxradio('disable');
-	// 			}
-	// 		});
-	// 	}
-	// 	chkswitch('#primary','0','#pri input');
-	// 	chkswitch('#middle','1','.mid input');
-	// 	chkswitch('#high','2','#hig input');
-	// })
 	$(document).on('pagebeforecreate',function(){
 		$('input').attr('data-role','none');
 	});
