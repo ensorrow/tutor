@@ -20,7 +20,7 @@
 			$(this).siblings('li').removeClass('active');
 			$(this).addClass('active');
 		})
-	})($('.sub2 li,.sub3 li'))
+	})($('.sub2 li,.sub3 li,.grade li'))
 	
 	function close1(obj){
 		$(document).click(function(e){
