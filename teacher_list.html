@@ -91,17 +91,26 @@
 			<div id="mask">
 				<div class="content1">
 					<ul class="radio_form">
-						<li>男</li>
-						<li>女</li>
+						<li>男
+							<input type="radio" value="0">
+						</li>
+						<li>女
+							<input type="radio" value="1">
+						</li>
 					</ul>
 					<ul class="radio_form">
-						<li>教师</li>
-						<li>非教师</li>
+						<li>教师
+						<input type="radio" value="3"></li>
+						<li>非教师
+						<input type="radio" value="4"></li>
 					</ul>
 					<ul class="radio_form">
-						<li>高中</li>
-						<li>初中</li>
-						<li>小学</li>
+						<li>高中
+						<input type="radio" value="5"></li>
+						<li>初中
+						<input type="radio" value="6"></li>
+						<li>小学
+						<input type="radio" value="7"></li>
 					</ul>
 					<!-- 初中科目 -->
 					<ul class="aui-form chk_form">
@@ -218,6 +227,24 @@
 	</div>
 </body>
 <script type="text/javascript">
+	// $(document).ready(function(){
+	// 	$('.mid input,#pri input,#hig input').checkboxradio('disable');
+	// 	var a=new Array('0','0','0');
+	// 	function chkswitch(id,n,selector){
+	// 		$(id).change(function(event) {
+	// 			a[n]++;
+	// 			if(a[n]%2==1){
+	// 				$(selector).checkboxradio('enable');
+	// 			}
+	// 			else{
+	// 				$(selector).checkboxradio('disable');
+	// 			}
+	// 		});
+	// 	}
+	// 	chkswitch('#primary','0','#pri input');
+	// 	chkswitch('#middle','1','.mid input');
+	// 	chkswitch('#high','2','#hig input');
+	// })
 	$(document).on('pagebeforecreate',function(){
 		$('input').attr('data-role','none');
 	});
@@ -247,7 +274,7 @@
 		}
 		
 		$('.radio_form li').click(function(){
-			var tmpmsg=$(this).html();
+			var tmpmsg=$(this).text();
 			$('#mask').hide();
 			$('.content1 ul').hide();
 			$('.special input').val(tmpmsg);

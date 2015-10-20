@@ -174,14 +174,15 @@
 					 		<label class="aui-input-addon">累计教学时长：</label>
 					 		<input type="text" class="aui-input disabled" value="5小时" disabled>
 					 	</li>
-					 	<li class="aui-input-row">
+					 	<!-- 我认为没有必要，而且项目太多显示不完 -->
+					 	<!-- <li class="aui-input-row">
 					 		<label class="aui-input-addon">单价：</label>
 					 		<input type="text" class="aui-input" value="50元/h">
 					 	</li>
 					 	<li class="aui-input-row">
 					 		<label class="aui-input-addon">教学科目：</label>
 					 		<input type="text" class="aui-input" value="小学语文，初中数学">
-					 	</li>
+					 	</li> -->
 					 	<li class="aui-input-row">
 					 		<input type="submit" class="aui-btn aui-btn-primary aui-btn-block mySub" value="发送简历">
 					 	</li>
@@ -202,142 +203,6 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript" src="js/dropload.js"></script>
-<script type="text/javascript">
-//get msg by ajax
-function refresh(){
-	$.ajax({
-            type: 'GET',
-            url: 'json/more.json',
-            dataType: 'json',
-            success: function(data){
-                var result = '';
-                for(var i = 0; i < data.lists.length; i++){
-                    result +=   '<li><a href="'+data.lists[i].link+'">'
-                                    +'<img src="'+data.lists[i].pic+'" alt="">'
-                                    +'<h1>'+data.lists[i].name+'</h1>'
-                                    +'<h2>'+data.lists[i].grade+'</h2>'
-                                    +'<h3>'+data.lists[i].subject+'</h3>'
-                                    +'<h4>'+data.lists[i].address+'</h4>'
-                                    +'<span class="ongoing">在读'+data.lists[i].ongoing+'门</span>'
-                                    +'<span class="distance">'+data.lists[i].distance+'km</span>'
-                                +'</a></li>';
-                }
-                setTimeout(function(){
-                	$('.lists').append(result).listview("refresh");
-                	$('#refresh').removeClass('active');
-                	showMask();
-                }, 1000)               
-            },
-            error: function(xhr, type){
-                alert('Ajax error!');
-            }
-        });
-}
-//first load
-$(document).on('pageinit',refresh());
-//refresh button for computer or some browsers where the touchmove event cannot work
-$('#refresh').on('click',function(){
-	$(this).addClass('active');
-	refresh();
-});
-//dropload
-$('#main').dropload({
-    scrollArea : window,
-    loadDownFn : function(me){
-        // refresh(me);
-        $.ajax({
-            type: 'GET',
-            url: 'json/more.json',
-            dataType: 'json',
-            success: function(data){
-                var result = '';
-                for(var i = 0; i < data.lists.length; i++){
-                    result +=   '<li><a href="'+data.lists[i].link+'">'
-                                    +'<img src="'+data.lists[i].pic+'" alt="">'
-                                    +'<h1>'+data.lists[i].name+'</h1>'
-                                    +'<h2>'+data.lists[i].grade+'</h2>'
-                                    +'<h3>'+data.lists[i].subject+'</h3>'
-                                    +'<h4>'+data.lists[i].address+'</h4>'
-                                    +'<span class="ongoing">在读'+data.lists[i].ongoing+'门</span>'
-                                    +'<span class="distance">'+data.lists[i].distance+'km</span>'
-                                +'</a></li>';
-                }
-                // 为了测试，延迟1秒加载
-                setTimeout(function(){
-                    $('.lists').append(result).listview("refresh");
-	                showMask();
-	                me.resetload();
-                },1000);
-				
-            },
-            error: function(xhr, type){
-                alert('Ajax error!');
-                me.resetload();
-            }
-        });
-    }
-});
-</script>
-<script type="text/javascript">		
-	for(var i=0;i<3;i++){	
-		(function(num){
-			$('.navli').eq(num).children('a').click(function(){
-				$(this).toggleClass('active');
-				$('.submenu').eq(num).toggle();
-				for(var j=0;j<3;j++){
-					if (j!=num) {$('.submenu').eq(j).hide();$('.navli').eq(j).children('a').removeClass('active')};
-				}
-				return false;
-			})
-		})(i)
-		$('li.sub_gra').eq(i).click(function(){
-			$(this).siblings('li.sub_gra').children('ul').hide().end().removeClass('active');
-			$(this).children('ul').show().end().addClass('active');
-		})
-	}
-	(function(obj){
-		obj.click(function(){
-			$(this).siblings('li').removeClass('active');
-			$(this).addClass('active');
-		})
-	})($('.sub2 li,.sub3 li'))
-	
-	function close1(obj){
-		$(document).click(function(e){
-			var target=e.target;
-			if(obj.get(0)!==target&&!$.contains(obj.get(0),target)){
-				obj.hide();
-			}
-		})
-	}
-	close1($('.sub1'));
-	close1($('.sub2'));
-	close1($('.sub3'));	
-	function closeMask(obj){
-		$('#mask').click(function(e){
-			var target=e.target;
-			if(obj.get(0)!==target&&!$.contains(obj.get(0),target)){
-				$('#mask').hide('500');
-			}
-		})
-		$('#mask .mySub').click(function(){
-			$('#mask').hide();
-		})
-	}	
-	$(document).on('pagebeforecreate',function(){
-		$('#mask input').attr('data-role','none');
-	});
-	$(document).on('pageinit',function(){
-		$('#mask').css('height',$(document).height()+'px');
-		showMask();		
-	})
-	function showMask(){
-		$('#main li').each(function(){
-			$(this).click(function(){
-				$('#mask').show('1000',function(){closeMask($('.content1'));});
-			})
-		})
-	}
-	
-</script>
+<script type="text/javascript" src="js/myload.js"></script>
+<script type="text/javascript" src="js/search.js">	</script>
 </html>
