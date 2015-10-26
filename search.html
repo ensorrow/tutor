@@ -203,6 +203,73 @@
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>
 <script type="text/javascript" src="js/dropload.js"></script>
-<script type="text/javascript" src="js/myload.js"></script>
+
+<script type="text/javascript">
+var ajaxdatanow = 1;
+var ajaxdatanum = 3;
+var ajaxurl = 'json/getdata.html';
+function ajaxsend() {
+	$.ajax({
+            type: 'GET',
+            url: ajaxurl,
+            data: {
+            	'datanum': ajaxdatanum,
+            	'datanow': ajaxdatanow
+            },
+            dataType: 'json',
+            success: function(data){            	
+            	// console.log(data);
+            	if (!data) {
+            		alert('over');
+            		exit(1);
+            	}
+
+            	data = JSON.parse(data);
+            	// console.log(data);
+                var result = '';
+                ajaxdatanow ++;
+                // console.log(ajaxdatanow);
+                for(var i = 0; i < data.lists.length; i++){
+                    result +=   '<li>'
+                                    +'<img src="/Public/'+data.lists[i].pic+'" alt="">'
+                                    +'<h1>'+data.lists[i].name+'</h1>'
+                                    +'<h2>'+data.lists[i].rank+'</h2>'
+                                    +'<h3>'+data.lists[i].std_sch+'</h3>'
+                                    +'<h4>'+data.lists[i].live+'</h4>'
+                                +'</li>';
+                }
+                setTimeout(function(){
+                	$('.lists').append(result).listview("refresh");
+                	$('#refresh').removeClass('active');
+                	showMask();
+	                me.resetload();
+                }, 1000)               
+            },
+            error: function(xhr, type){
+                alert('Ajax error!');
+            }
+        });
+
+}
+//get msg by ajax
+function refresh(){
+	ajaxsend();
+}
+//first load
+$(document).on('pageinit',refresh());
+//refresh button for computer or some browsers where the touchmove event cannot work
+$('#refresh').on('click',function(){
+	$(this).addClass('active');
+	refresh();
+});
+//dropload
+$('#main').dropload({
+    scrollArea : window,
+    loadDownFn : function(me){
+    		window.me=me;
+			ajaxsend();
+    }
+});
+</script>
 <script type="text/javascript" src="js/search.js">	</script>
 </html>

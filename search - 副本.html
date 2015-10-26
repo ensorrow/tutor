@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>搜索学生</title>
+	<link rel="stylesheet" href="css/themes/myapp.min.css" />
+  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/downmenu.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+	<link rel="stylesheet" type="text/css" href="css/aui.css">
+	<link rel="stylesheet" type="text/css" href="css/dropload.min.css">
+</head>
+<body>
+	<div data-role="page" id="page1">
+		<div data-role="header" data-position="fixed" id="header">
+			<a href="#" data-rel="back" class="myback ui-btn-trans">返回</a>
+			<h1 class="mytitle">搜索学生</h1>
+			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
+			<div data-role="navbar" id="nav">
+			<ul>
+				<li class="navli">
+					<a href="#" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-d ui-btn-icon-right">年级</a>
+					<ul class="submenu sub1">
+						<li class="active sub_gra">小学
+							<ul class="grade pri">
+								<li class="active">一年级</li>
+								<li>二年级</li>
+								<li>三年级</li>
+								<li>四年级</li>
+								<li>五年级</li>
+								<li>六年级</li>
+							</ul>
+						</li>
+						<li class="sub_gra">初中
+							<ul class="grade mid">
+								<li class="active">一年级</li>
+								<li>二年级</li>
+								<li>三年级</li>
+							</ul>
+						</li>
+						<li class="sub_gra">高中
+							<ul class="grade hig">
+								<li class="active">一年级</li>
+								<li>二年级</li>
+								<li>三年级</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="navli">
+					<a href="javascript" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-d ui-btn-icon-right">学科</a>
+					<ul class="submenu sub2">
+						<li class="active">语文</li>
+						<li>数学</li>
+						<li>外语</li>
+					</ul>
+				</li>
+				<li class="navli">
+					<a href="javascript" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-d ui-btn-icon-right">所在地</a>
+					<ul class="submenu sub3">
+						<li class="active">碑林区</li>
+						<li>雁塔区</li>
+						<li>莲湖区</li>
+						<li>未央区</li>
+						<li>新城区</li>
+						<li>阎良区</li>
+						<li>长安区</li>
+						<li>临潼区</li>
+						<li>灞桥区</li>
+					</ul>
+				</li>				
+			</ul>
+			<a href="searchbar.html" id="search_btn"></a>
+		</div>
+		</div>
+		
+		<div data-role="content" id="main">
+			<ul data-role="listview" class="lists">
+				<!-- <li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<h4>西安交通大学/仲英书院/x栋xxx</h4>
+						<span class="ongoing">在读1门</span>
+						<span class="distance">1.6km</span>							
+					</a>					
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<h4>西安交通大学/仲英书院/x栋xxx</h4>
+						<span class="ongoing">在读2门</span>
+						<span class="distance">2.0km</span>				
+					</a>					
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<h4>西安交通大学/仲英书院/x栋xxx</h4>
+						<span class="ongoing">在读1门</span>
+						<span class="distance">4.0km</span>							
+					</a>					
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<h4>西安交通大学/仲英书院/x栋xxx</h4>
+						<span class="ongoing">在读2门</span>
+						<span class="distance">6.0km</span>						
+					</a>					
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<h4>西安交通大学/仲英书院/x栋xxx</h4>
+						<span class="ongoing">在读1门</span>					
+						<span class="distance">10.0km</span>
+					</a>					
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/headpic.png">
+						<h1>吕哲扬</h1>
+						<h2>小学三年级</h2>
+						<h3>math</h3>
+						<h4>西安交通大学/仲英书院/x栋xxx</h4>
+						<span class="ongoing">在读2门</span>
+						<span class="distance">3.0km</span>						
+					</a>					
+				</li> -->
+			</ul>
+			<button id="refresh"></button>			
+		</div>
+		<div id="mask">
+				<div class="content1">
+					 <ul class="aui-form">
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">教师姓名：</label>
+					 		<input type="text" class="aui-input" value="吕哲扬" disabled>
+					 	</li>
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">毕业在读院校：</label>
+					 		<input type="text" class="aui-input" value="西安交大">
+					 	</li>
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">性别：</label>
+					 		<input type="text" class="disabled aui-input" value="男" disabled>
+					 	</li>
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">住址：</label>
+					 		<input type="text" class="disabled aui-input" value="西安市西安交大仲英书院405">
+					 	</li>
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">等级：</label>
+					 		<input type="text" class="aui-input" value="5">
+					 	</li>
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">累计教学时长：</label>
+					 		<input type="text" class="aui-input disabled" value="5小时" disabled>
+					 	</li>
+					 	<!-- 我认为没有必要，而且项目太多显示不完 -->
+					 	<!-- <li class="aui-input-row">
+					 		<label class="aui-input-addon">单价：</label>
+					 		<input type="text" class="aui-input" value="50元/h">
+					 	</li>
+					 	<li class="aui-input-row">
+					 		<label class="aui-input-addon">教学科目：</label>
+					 		<input type="text" class="aui-input" value="小学语文，初中数学">
+					 	</li> -->
+					 	<li class="aui-input-row">
+					 		<input type="submit" class="aui-btn aui-btn-primary aui-btn-block mySub" value="发送简历">
+					 	</li>
+					 </ul>
+				</div>
+			</div>
+		<div data-role="panel" data-position="right" data-position-fixed="true" data-display="reveal" id="right_panel">
+			<h2><img src="images/head_sam.gif"></h2>
+			<h1>袁拓</h1>
+			<ul id="sidelist">
+				<li><a href="#">返回首页</a></li>
+				<li><a href="#">更换账号</a></li>
+				<li><a href="#">退出登录</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/dropload.js"></script>
+<script type="text/javascript" src="js/myload.js"></script>
+<script type="text/javascript" src="js/search.js">	</script>
+</html>

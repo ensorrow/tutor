@@ -21,7 +21,7 @@
 			$(this).addClass('active');
 		})
 	})($('.sub2 li,.sub3 li,.grade li'))
-	
+	// send resume
 	function close1(obj){
 		$(document).click(function(e){
 			var target=e.target;
