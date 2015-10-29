@@ -28,6 +28,9 @@
 	background: url(../images/wrong.gif) left no-repeat;
 	background-size: 20px; 
 }
+#cen_group .ui-input-text:nth-child(4){
+	margin-bottom: 10px;
+}
 #cen_group input{
 	font-size: 16px;
 	padding: 7px 0;
@@ -63,6 +66,10 @@
 #password,#confirm{
 	background: url(../images/lock.png) no-repeat 10px;
 }
+#page #verify{
+	background: url(../images/verify2.png) no-repeat 6px;
+	background-size: 25px;
+}
 .ui-block-a,.ui-block-b{position: relative;height: 35px;}
 #page .ui-grid-a a{
 	display: block;
@@ -80,4 +87,21 @@
 }
 .ui-block-b a{
 	left: 10px;
+}
+/*new register.html*/
+#page .regi{
+	margin-top: 65px;
+}
+#page .ui-select{
+	width: 50%;
+	float: right;
+	margin-right: 6px;
+}
+#page .ui-select .ui-btn{
+	background-color: #3388cc;
+	color: #fff;
+	border: 0;
+}
+#checkImg{
+	margin: 13px 0 0 6px;
 }

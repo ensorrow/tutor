@@ -11,12 +11,22 @@
 </head>
 <body>
 	<div data-role="page" id="page">
-		<div id="cen_group">
-			<h1>教师端注册</h1>
+		<div id="cen_group" class="regi">
+			<h1>用户注册</h1>
 			<form id="registerform">
 				<input type="text" placeholder="账号" id="username" name="username">
 				<input type="password" placeholder="密码" name="password" id="password">
-				<input type="password" placeholder="再次输入密码" name="confirm" id="confirm">
+				<input type="password" placeholder="再次输入密码" name="confirm" id="confirm">				
+				<!-- <label for="stu">学生</label>
+				<input type="radio" id="stu" name="type">
+				<label for="teac">教师</label>
+				<input type="radio" id="teac" name="type"> -->
+				<input type="text" id="verify"  placeholder="验证码" name="verify">
+				<img  data-ajax="false" src="http://tztestzt.sinaapp.com/Api/Tutor/validation.html" id="checkImg">
+				<select name="type">
+				  <option value="0">学生</option>
+				  <option value="1">教师</option>
+				</select>
 				<input type="submit" value="注册账户">
 			</form>
 		</div>
