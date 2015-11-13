@@ -10,6 +10,7 @@
 	width: 70%;
 	margin: 0 auto;
 	margin-top: 108px;
+	position: relative;
 }
 #cen_group .ui-input-text,#cen_group .ui-input-btn{
 	border-radius: 35px;
@@ -17,16 +18,23 @@
 	border: 0;
 	position: relative;
 }
-#cen_group .ui-input-text label{
+#cen_group span.formtips{
 	position: absolute;
 	left: 9px;
 	top: 38px;
 	font-size: 12px;
 	line-height: 20px;
-	color: red;
-	padding-left: 20px;
-	background: url(../images/wrong.gif) left no-repeat;
+	padding-left: 20px;	
+}
+#cen_group span.onSuccess{
+	color: #80c269;
+	background: url(../images/right.gif) left no-repeat;
 	background-size: 20px; 
+}
+#cen_group span.onError{
+	color: red;
+	background: url(../images/wrong.gif) left no-repeat;
+	background-size: 20px; 	
 }
 #cen_group .ui-input-text:nth-child(4){
 	margin-bottom: 10px;
