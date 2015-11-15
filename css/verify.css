@@ -1,51 +1,50 @@
-#page .ui-content{
+*{
+	margin: 0;
 	padding: 0;
-}
-#page{
-	display: flex;
-	display: -webkit-flex;
-	flex-direction: column;
-}
-#content{
-	flex: 1;
-	display: flex;
-	display: -webkit-flex;
-	flex-direction: column;
-}
-#sec1,#sec2{
-	display: flex;
-	display: -webkit-flex;
-	align-items: center;
 }
 #sec1{
 	background: #ee4638;
-	flex: 1;
-	justify-content: center;
+	text-align: center;
 }
-#sec2{
-	flex-direction: column;
-	flex: 3;
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+}
+body>div{
+	height: 100%;
+}
+#sec1{
+	height: 50%;
 }
 #sec1 img{
+	max-width: 190px;
 	width: 40%;
-	animation: rotate infinite ease 3s;
-	-webkit-animation: rotate infinite ease 3s;
+	margin-top: 40px;
+	animation: rotate 2.3s ease-in-out infinite;
 }
-#sec2 p{
-	margin-top: 2em;
-	margin-bottom: 3em;
+#sec1 p{
+	color: #f2f2f2;
+	padding: 2em 0;
 }
 #sec2 a{
+	color: #333;
 	display: block;
-	width: 6em;
-	height: 6em;
-	text-align: center;
-	line-height: 6em;
+	width: 5.6em;
+	height: 5.6em;
+	line-height: 5.6em;
 	border-radius: 3em;
-	background: #eee;
-	box-shadow: 0 0 16px #ccc;
-	align-self: center;
+	background: #f2f2f2;
+	box-shadow: 0 1px 4px #ccc;
 	text-decoration: none;
+	text-align: center;
+	font-size: 1.1em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -2.8em;
+	margin-left: -2.8em;
 }
 @keyframes rotate{
 	0%{
