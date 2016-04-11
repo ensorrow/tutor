@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>教师端注册</title>
+	<link rel="stylesheet" href="css/themes/myapp.min.css" />
+  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+	<div data-role="page" id="page">
+		<div id="cen_group" class="regi">
+			<h1>用户注册</h1>
+			<form id="registerform">
+				<input type="text" placeholder="账号" id="username" name="username">
+				<input type="password" placeholder="密码" name="password" id="password">
+				<input type="password" placeholder="再次输入密码" name="confirm" id="confirm">				
+				<input type="text" id="verify"  placeholder="验证码" name="verify">
+				<img  data-ajax="false" src="http://tztestzt.sinaapp.com/Api/Tutor/validation.html" id="checkImg">
+				<select name="type">
+				  <option value="0">学生</option>
+				  <option value="1">教师</option>
+				</select>
+				<input type="submit" value="注册账户">
+			</form>
+		</div>
+		<section style="text-align:center;font-size:14px;">
+			<a href="login.html" rel="external">已有账号？点击登录</a>
+		</section>
+	</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/validate.js"></script>
+</html>

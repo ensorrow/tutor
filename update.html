@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>当前状况</title>
+	<link rel="stylesheet" href="css/themes/myapp.min.css" />
+  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/update.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+</head>
+<body>
+	<div data-role="page" id="page">
+		<div data-role="header" data-position="fixed" class="header_shadow">
+			<a href="#" data-rel="back" class="myback ui-btn-trans">返回</a>
+			<h1 class="mytitle">教师信息</h1>
+			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
+			<div data-role="navbar" id="nav">
+				<ul>
+					<li><a href="#" class="active">目前状况</a></li>
+					<li><a href="update2.html" rel="external">升级路线</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+			<div id="stu_info" class="my-grid">
+				<div class="my-gridc1">
+					<div class="cir_img_wrapper">
+						<img src="images/head_sam.gif">
+					</div>
+				</div>
+				<div class="my-gridc2">
+					<ul>
+						<li id="name">吕哲扬</li>
+						<li id="level">当前等级：<span>Lv2</span>&nbsp<span>小学老师</span></li>
+						<li id="update_exp">升至下一级所需经验：<span>25</span></li>
+						<li id="exp">当前总经验：<span>150</span></li>
+					</ul>
+				</div>
+			</div>
+			<div id="progress_wrap">
+				<span>Lv2 小学老师</span>
+				<div id="progress_bar"><span>75/100</span></div>
+			</div>
+			<div id="grid_wra">
+				<div id="grid">
+					<ul>
+						<li>
+							<h1><span>7/24</span>&nbsp&nbsp获得经验:<span class="exp">5</span></h1>
+							<h2>三角函数教学:<span class="exp">5</span></h2>
+							<h2>部分立体几何题辅导:<span class="exp">5</span></h2>
+						</li>
+						<li>
+							<h1><span>7/24</span>&nbsp&nbsp获得经验:<span class="exp">5</span></h1>
+							<h2>三角函数教学:<span class="exp">5</span></h2>
+						</li>
+						<li>
+							<h1><span>7/24</span>&nbsp&nbsp获得经验:<span class="exp">5</span></h1>
+							<h2>三角函数教学:<span class="exp">5</span></h2>
+							<h2>部分立体几何题辅导:<span class="exp">5</span></h2>
+						</li>
+						<li>
+							<h1><span>7/24</span>&nbsp&nbsp获得经验:<span class="exp">5</span></h1>
+							<h2>三角函数教学:<span class="exp">5</span></h2>
+						</li>
+						<div id="draw_line"></div>
+						<img src="images/tl_icon.png">
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div data-role="panel" data-position="right" data-position-fixed="true" data-display="reveal" id="right_panel">
+			<h2><img src="images/head_sam.gif"></h2>
+			<h1>袁拓</h1>
+			<ul id="sidelist">
+				<li><a href="#">返回首页</a></li>
+				<li><a href="#">更换账号</a></li>
+				<li><a href="#">退出登录</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	$(document).on('pageinit',function(){
+		var len=$('#grid li').length;
+		var wid=150+130*len-80;
+		console.log(wid);
+		$('#draw_line').css('width',wid+'px');
+		$('#grid ul').css('width',249+130*len+'px');
+		for(var i=0;i<len;i++){
+			$('#grid li').eq(i).css('left',10+130*i+'px');
+		}
+	});
+</script>
+</html>

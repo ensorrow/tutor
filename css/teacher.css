@@ -20,7 +20,6 @@
 #header_trans{
 	background: rgba(0,0,0,0);
 	border: 0;
-	position: fixed;
 	z-index: 999;
 }
 .ui-btn-trans{
@@ -102,13 +101,13 @@
 }
 #teach_time{
 	padding-left: 30px;
-	background: url(../images/clock.gif) no-repeat left;
+	background: url(../images/clock.png) no-repeat left;
 	background-size: 17px;
 	line-height: 17px;
 }
 #id_type{
 	padding-left: 30px;
-	background: url(../images/lv.gif) no-repeat left;
+	background: url(../images/lv.png) no-repeat left;
 	background-size: 17px;
 	line-height: 17px;
 }

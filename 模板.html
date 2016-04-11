@@ -4,10 +4,30 @@
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 	<title>Untitled Document</title>
-	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/themes/myapp.min.css" />
+  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
 </head>
 <body>
-
+	<div data-role="page">
+		<div data-role="header">
+			<a href="#" data-rel="back">返回</a>
+			<h1>demo</h1>
+			<a href="#right_panel" class="ui-btn ui-btn-icon-bars"></a>
+			<div data-role="navbar" class="">
+				<ul>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+			<ul data-role="listview">
+				
+			</ul>
+		</div>
+		<div data-role="footer"></div>
+		<div data-role="panel" id="right_panel"></div>
+	</div>
 </body>
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.mobile-1.4.5.min.js"></script>

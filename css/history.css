@@ -4,6 +4,12 @@
 	padding: 0;
 	font-weight: normal!important;
 }
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+}
 #main .ui-listview{
 	margin: 0;
 }
@@ -74,7 +80,7 @@
 	color: #30aaea!important;
 }
 .ui-navbar{
-	padding: 6px 20px 5px 20px;
+	padding: 6px 20px;
 	background-color: #30aaea;
 }
 .ui-navbar li a{
@@ -153,4 +159,135 @@
 .sta_false{
 	background: url(../images/cry.png) no-repeat left;
 	color: #a2a2a2;
+}
+.comment_stat{
+	position: absolute;
+	right: 13px;
+	top: 20px;	
+	color: #aeaeae;
+	display: block;
+	width: 100px;
+	text-align: left;
+}
+.his1 .comment_stat{
+	width: 50px;
+}
+.comment_stat i{
+	color: #fd6f43;
+	font-style: normal;
+}
+.january li:first-child::before{
+	content: '一月';	
+}
+.february li:first-child::before{
+	content: '二月';	
+}
+.march li:first-child::before{
+	content: '三月';	
+}
+.april li:first-child::before{
+	content: '四月';	
+}
+.may li:first-child::before{
+	content: '五月';	
+}
+.june li:first-child::before{
+	content: '六月';	
+}
+.july li:first-child::before{
+	content: '七月';	
+}
+.auguest li:first-child::before{
+	content: '八月';	
+}
+.september li:first-child::before{
+	content: '九月';	
+}
+.october li:first-child::before{
+	content: '十月';	
+}
+.november li:first-child::before{
+	content: '十一月';	
+}
+.december li:first-child::before{
+	content: '十二月';	
+}
+li.ui-first-child{
+	margin-top: 18px;
+}
+li.ui-first-child::before{
+	display: block;
+	position: absolute;
+	top: -13px;
+	left: 0px;
+	padding: 3px 6px;
+	background-color: #44b4ee;
+	color:#fff;
+	z-index: 999;
+}
+
+#dialog .ui-dialog-contain{
+	overflow: visible;
+}
+#dialog .ui-navbar{
+	background-color: #f5f5f5;
+}
+#dialog .ui-navbar li{
+	border: none;
+	background-color: rgba(0,0,0,0);
+}
+#dialog .ui-navbar a{
+	border: none;
+}
+#dialog a.active{
+	color: #30aaea!important;
+}
+#dialog a.ui-btn-active{
+	background-color: #f5f5f5
+}
+#dialog .ui-icon-delete:after{
+	background-image: url(../images/close.png);
+}
+#dialog #empty{
+	text-align: center;
+}
+#dialog #empty img{
+	margin-top: 60px;
+	width: 50%;
+}
+#dialog #empty .ui-btn{
+	width: 135px;
+	height: 23px;
+	text-align: center;
+	line-height: 23px;
+	font-size: 16px;
+	background-color: #fff;
+	color: #a2a2a2;
+	border: 1px solid #a2a2a2;
+	border-radius: 3px;
+	margin: 5px auto 120px auto;
+}
+#chart_wrap{
+	width: 100%;
+	height: 400px;
+	overflow: scroll;
+}
+#his2 .ui-panel-wrapper{
+	background: url(../images/yuan.png) bottom no-repeat;
+	background-size: 100%;
+}
+#income_sum{
+	padding: 10px 30px;	
+	color: #44b4ee;
+	margin: 12px 0;
+	background: url(../images/income.png) no-repeat 25px 5px;
+	background-size: 27px;
+	background-color: #f8f8f8;
+}
+#income_sum span{
+	padding-left: 30px;	
+}
+#income_sum i{
+	font-style: normal;
+	color: #ffa61b;
 }

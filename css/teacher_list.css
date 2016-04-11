@@ -1,0 +1,184 @@
+*{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-weight: normal!important;
+}
+#main .ui-listview{
+	margin: 0;
+}
+.ui-content{
+	padding: 0;
+}
+#myhead .mytitle{
+	margin: 0;
+	padding: .8em 0;
+}
+#myhead{
+	border: none;
+}
+.ui-btn-trans{
+	background-color: rgba(0,0,0,0)!important;
+	color: #fff!important;
+	border: 0;
+	padding-left: 28px;
+	box-shadow: none;
+	font-size: 16px!important;
+}
+.ui-btn-trans:after{
+	content: '';
+	display: block;
+	width: 16px;
+	height:30px;	
+	position: absolute;
+	left: 6px;
+	top: 50%;
+	margin-top: -15px;
+}
+.myback::after{
+	background: url(../images/back.gif) no-repeat left;
+	background-size: 100%;
+}
+.mymenu{
+	top: 14px;
+	right: 0px;
+}
+.mymenu:after{
+	background: url(../images/menu.gif) no-repeat left;
+	background-size: 100%;
+	width: 20px;
+}
+#header_wra{
+	width: 100%;
+	height: 100px;
+	background: #1abc9c;
+}
+.my-gridc1{
+	width: 36%;
+	text-align: center;
+	float: left;
+}
+.my-gridc2{
+	width: 64%;
+	float: left;
+}
+.cir_img_wrapper{
+	display: block;
+	width: 70px;
+	height: 70px;
+	border: 5px solid #ebeaea;
+	border-radius: 50px;
+	margin: 14px auto;
+	box-shadow: 0 0 3px #999;
+	position: relative;
+	z-index: 1;
+}
+.cir_img_wrapper img{
+	width: 100%;
+}
+#header_wra hgroup{
+	padding-top: 15px;
+}
+#header_wra h1,#header_wra h2{
+	color: #eee;
+	font-size: 16px;
+	line-height: 1.9em;
+}
+#header_wra hgroup span{
+	color: #fff;
+}
+#mask{
+	background-color: rgba(0,0,0,0.3);
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: none;
+}
+.content1{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 1000;
+	background-color: #fff;
+}
+.radio_form li{
+	height: 2.6em;
+	font-size: 1.2em;
+	border-bottom: 1px solid #ddd;
+	text-align: center;
+	line-height: 2.6em;
+	position: relative;
+}
+.radio_form li input[type=radio]{
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	position: absolute;
+	opacity: 0;
+}
+.content1 ul{
+	display: none;
+}
+.content1 li.active{
+	background-color: #eee;
+}
+.freeze{
+	overflow: hidden;
+}
+#mask label{
+	font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    color: #333;
+    text-align: center;
+    display: table-cell;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 5px;
+}
+#mask button{
+	padding: 13.5px 0;
+	border-radius: 0;
+}
+#main .chkimi{
+	width: 100%;
+}
+#main .chkimi h3{
+	display: inline-block;
+	font-weight: 700;
+	padding: 10px 15px 10px 5px;
+	font-size: 14px;
+}
+#main .chkimi span{
+	display: inline-block;
+	padding: 3px 20px 3px 6px;
+	margin-left: 6px;
+	color: #666;
+	background: url(../images/close2.png) #ddd no-repeat right;
+	background-size: 18px;
+}
+#main .mySub{
+	width: 80%;
+	margin: 20px auto;
+	padding: 7.5px 0;
+}
+#file_upload input{
+	position: absolute;
+	left: 0;
+	opacity: 0;
+}
+#file_upload button{
+	margin: 4px 5px;
+}
+.aui-form .aui-input-row{
+	width:100%;
+}
+#stuPic1,#stuPic2{
+	display: inline-block;
+	padding: 4px 6px;
+	color: #666;
+}

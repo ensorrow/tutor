@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
 	<title>教师端首页</title>
-	<link rel="stylesheet" href="css/themes/my-custom-theme.css" />
+	<link rel="stylesheet" href="css/themes/myapp.css" />
   	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
 	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/teacher.css">
@@ -12,37 +12,39 @@
 </head>
 <body>
 	<div data-role="page">
-		<div data-role="header" data-position="fixed" id="header_trans" class="myheader">
+		<div data-role="header" id="header_trans" class="myheader">
 			<a href="#" data-rel="back" class="myback ui-btn-trans">返回</a>
 			<h1 class="mytitle">首页</h1>
 			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
 		</div>
-		<div id="add_bg">
-			<div class="my-gridc1">
-				<a href="#" class="cir_img_wrapper"><img src="images/head_sam.gif"></a>
+		<div data-role="content">
+			<div id="add_bg">
+				<div class="my-gridc1">
+					<a href="teacher_list.html" rel=external class="cir_img_wrapper"><img src="images/head_sam.gif"></a>
+				</div>
+				<ul class="my-gridc2">
+					<li id="name">袁拓</li>
+					<li id="source">独立家教</li>
+					<li id="teach_time">29小时</li>
+					<li id="id_type">小学老师</li>
+				</ul>
 			</div>
-			<ul class="my-gridc2">
-				<li id="name">袁拓</li>
-				<li id="source">独立家教</li>
-				<li id="teach_time">29小时</li>
-				<li id="id_type">小学老师</li>
-			</ul>
-		</div>
-		<div id="bigbtn">			
-			<ul class="ui-grid-a">
-				<li class="ui-block-a"><a href="#" class="index_btn"><img src="images/main_btn_search.gif" id="test"><h2>搜索学生</h2></a></li>
-				<li class="ui-block-b"><a href="#" class="index_btn"><img src="images/main_btn_order.gif"><h2>订单信息</h2></a></li>
-				<li class="ui-block-a"><a href="#" class="index_btn"><img src="images/main_btn_update.gif"><h2>升级指南</h2></a></li>
-				<li class="ui-block-b"><a href="#" class="index_btn"><img src="images/main_btn_history.gif"><h2>历史信息</h2></a></li>
-				<li class="ui-block-a"><a href="#" class="index_btn"><img src="images/main_btn_window.gif"><h2>资讯窗口</h2></a></li>
-				<li class="ui-block-b"><a href="#" class="index_btn"><img src="images/main_btn_chat.gif"><h2>对话后台</h2></a></li>
-			</ul>
+			<div id="bigbtn">			
+				<ul class="ui-grid-a">
+					<li class="ui-block-a"><a href="search.html" class="index_btn" rel=external><img src="images/main_btn_search.gif" id="test"><h2>搜索学生</h2></a></li>
+					<li class="ui-block-b"><a href="order1.html" class="index_btn" rel=external><img src="images/main_btn_order.gif"><h2>订单信息</h2></a></li>
+					<li class="ui-block-a"><a href="update.html" class="index_btn" rel=external><img src="images/main_btn_update.gif"><h2>升级指南</h2></a></li>
+					<li class="ui-block-b"><a href="history1.html" class="index_btn" rel=external><img src="images/main_btn_history.gif"><h2>历史信息</h2></a></li>
+					<li class="ui-block-a"><a href="news.html" class="index_btn" rel=external><img src="images/main_btn_window.gif"><h2>资讯窗口</h2></a></li>
+					<li class="ui-block-b"><a href="chat.html" class="index_btn" rel=external><img src="images/main_btn_chat.gif"><h2>对话后台</h2></a></li>
+				</ul>
+			</div>
 		</div>
 		<div data-role="panel" data-position="right" data-display="push" id="right_panel">
 			<h2><img src="images/head_sam.gif"></h2>
 			<h1>袁拓</h1>
 			<ul id="sidelist">
-				<li><a href="#">返回首页</a></li>
+				<li><a href="index.html" rel=external>返回首页</a></li>
 				<li><a href="#">更换账号</a></li>
 				<li><a href="#">退出登录</a></li>
 			</ul>
@@ -62,11 +64,6 @@
 		$('.ui-block-b,.ui-block-a').css("height",wid+"px");
 		$('.ui-block-a img,.ui-block-b img').css({'margin-left':-imgwid/2+'px','margin-top':-imgwid/2-10+'px'});
 		$('.ui-block-a h2,.ui-block-b h2').css({'margin-left':-26+'px','margin-top':-4+imgwid/2+'px'});
-		$(window).scroll(function(){
-			var opa = $(window).offset()/222;
-			console.log(opa);
-			$('#header_trans').css('background','rgba(0,0,0,'+opa+')');
-		});
 	});	
 
 </script>

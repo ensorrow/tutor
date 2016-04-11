@@ -1,0 +1,245 @@
+*{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-weight: normal!important;
+	box-shadow: none!important;
+}
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+}
+#main .ui-listview{
+	margin: 0;
+}
+#page .ui-panel-wrapper{
+	background-color: #dddddd;
+}
+.ui-content{
+	padding: 0;
+}
+.myheader{
+	height: 46px;
+}
+#header_color .mytitle{
+	margin: 0;
+	padding: .8em 0;
+}
+#header_color{
+	border: 0;
+}
+#nav ul a{
+	border-top: none;
+}
+.ui-btn-trans{
+	background-color: rgba(0,0,0,0)!important;
+	color: #fff!important;
+	border: 0;
+	padding-left: 28px;
+	box-shadow: none;
+	font-size: 16px!important;
+}
+.ui-btn-trans:after{
+	content: '';
+	display: block;
+	width: 16px;
+	height:30px;	
+	position: absolute;
+	left: 6px;
+	top: 50%;
+	margin-top: -15px;
+}
+.myback::after{
+	background: url(../images/back.gif) no-repeat left;
+	background-size: 100%;
+}
+.mymenu{
+	top: 14px;
+	right: 0px;
+}
+.mymenu:after{
+	background: url(../images/menu.gif) no-repeat left;
+	background-size: 100%;
+	width: 20px;
+}
+#nav li a{
+	margin: 0 12px;
+	border-left: none;
+	position: relative;
+	padding: 5px 0;
+}
+#nav a.reddot:after{
+	content: '.';
+	color: red;
+	font-size: 44px;
+	font-weight: 700;
+	position: absolute;
+	top: -35px;
+	right: -1px;
+}
+#nav{
+	background: url(../images/nav_bg.png) repeat-x;
+}
+#nav .active{
+	border-bottom: 2px solid #30aaea;
+	color: #30aaea!important;
+}
+.ui-navbar{
+	padding: 6px 60px 3px 60px;
+	background-color: #30aaea;
+}
+.ui-navbar li a{
+	color: #aeaeae!important;
+	border-top-width: none!important;
+	text-decoration: none;
+}
+.ui-navbar .ui-btn{border-top-width: none!important;}
+.ui-navbar li:first-child{
+	border-left: none!important;
+	border-right: 1px solid #ececec;
+}
+.ui-navbar li:first-child a{border-left: none!important;}
+.ui-navbar li:last-child{
+	border-left: 1px solid #ffffff;
+}
+/*news.html*/
+#news_list li{
+	width: 80%;
+	margin: 15px auto;
+	padding: 8px;
+	background-color: #ffffff;
+}
+#news_list li img{
+	width: 100%;
+}
+#news_list li h1{
+	font-size: 18px;
+	float: left;
+}
+#news_list li h2{
+	font-size: 14px;
+	float: right;
+	color: #bbbbbb;
+}
+#news_list li p{
+	clear: both;
+	font-size: 12px;
+	color: #838383;
+	margin-top: 5px;
+}
+/*personal_msg.html*/
+#msg_list{
+	width: 80%;
+	margin: 12.5px auto;
+	background-color: #ffffff;
+	border-radius: 5px;
+	padding: 20px 12px;
+}
+#msg_list li{
+	margin: 5px 0;
+	border: 2px solid #a2a2a2;
+	padding: 10px 7px;
+	position: relative;
+}
+#msg_list li h1{
+	font-size: 14px;
+	color: #545454;;
+	padding-left: 33px;
+	background: url(../images/msg.png) no-repeat left;
+	background-size: 24px;
+	float: left;
+	width: 60%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#msg_list li h2{
+	font-size: 12px;
+	color: #a2a2a2;
+	float: right;
+}
+#msg_list li.reddot:before{
+	content: '.';
+	display: block;
+	color: #fd6f43;
+	font-size: 70px;
+	position: absolute;
+	right: -9px;
+	top: -62px;
+}
+#msg_list li:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+/*msg_detail.html*/
+#dialog{
+	background: #ddd!important;
+}
+#dialog .ui-dialog-contain{
+	border-radius: 9px;
+}
+#dialog .ui-overlay-shadow{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+#dialog .ui-content{
+	border-radius:0 0 9px 9px;
+	padding: 15px;
+	overflow: scroll;
+}
+#dialog .ui-icon-delete:after{
+	background-image: url(../images/close.png);
+}
+#dialog h1{
+	font-size: 18px;
+}
+#dialog h2{
+	font-size: 14px;
+	color: #a2a2a2;
+	margin: 10px 1em;
+}
+#dialog p{
+	margin: 5px;
+	text-indent: 2em;
+}
+#dialog img{
+	width: 100%;
+	margin: 10px 0;
+}
+#chatinput{
+	padding: 9px 4px;
+	background: #eee;
+/*	position: fixed;
+	bottom: 0;*/
+	width: 100%;
+	z-index: 999;
+}
+#chatinput div:first-child{
+	width: 80%;
+	float: left;
+	padding: 0;
+	text-align: center;
+	border: none;
+	margin: 0;
+}
+#chatinput input[type=text]{
+	margin: 0;
+	padding: 8px 5px;
+}
+#chatinput div:nth-child(2){
+	width: 20%;
+	text-align: center;
+	float: left;
+	padding: 3px 0;
+	border: none;
+}
+#chatinput input[type=submit]{
+	display: inline-block;
+	padding: 4.5px 12px;
+	background-color: #15b5e9;
+	color: #fff;
+	border-radius: 3px;
+}

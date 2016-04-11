@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>咨询窗口</title>
+	<link rel="stylesheet" href="css/themes/myapp.min.css" />
+  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+	<link rel="stylesheet" type="text/css" href="css/news.css">
+</head>
+<body>
+	<div data-role="page" id="page">
+		<div data-role="header" data-position="fixed" class="header_shadow" id="header_color">
+			<a href="#" data-rel="back" class="myback ui-btn-trans">返回</a>
+			<h1 class="mytitle">已完成</h1>
+			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
+			<div data-role="navbar" id="nav">
+				<ul>
+					<li><a href="#" class="active">公告</a></li>
+					<li><a href="personal_msg.html" class="reddot">个人消息</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content">
+			<ul id="news_list">
+				<li>
+					<a href="msg_detail.html" data-rel="dialog"><img src="images/news1.jpg"></a>
+					<h1>24小时高校课堂开课啦</h1>
+					<h2>昨天</h2>
+					<p>备战中考领先一步，你还在为成绩烦恼吗，24小时高效课堂让你提早进入备战状态，领先一步！</p>
+				</li>
+				<li>
+					<a href="msg_detail.html" data-rel="dialog"><img src="images/news2.jpg"></a>
+					<h1>24小时高校课堂开课啦</h1>
+					<h2>昨天</h2>
+					<p>备战中考领先一步，你还在为成绩烦恼吗，24小时高效课堂让你提早进入备战状态，领先一步！</p>
+				</li>
+				<li>
+					<a href="msg_detail.html" data-rel="dialog"><img src="images/news1.jpg"></a>
+					<h1>24小时高校课堂开课啦</h1>
+					<h2>昨天</h2>
+					<p>备战中考领先一步，你还在为成绩烦恼吗，24小时高效课堂让你提早进入备战状态，领先一步！</p>
+				</li>
+				<li>
+					<a href="msg_detail.html" data-rel="dialog"><img src="images/news2.jpg"></a>
+					<h1>24小时高校课堂开课啦</h1>
+					<h2>昨天</h2>
+					<p>备战中考领先一步，你还在为成绩烦恼吗，24小时高效课堂让你提早进入备战状态，领先一步！</p>
+				</li>
+			</ul>
+		</div>
+		<div data-role="panel" data-position="right" data-position-fixed="true" data-display="reveal" id="right_panel">
+			<h2><img src="images/head_sam.gif"></h2>
+			<h1>袁拓</h1>
+			<ul id="sidelist">
+				<li><a href="#">返回首页</a></li>
+				<li><a href="#">更换账号</a></li>
+				<li><a href="#">退出登录</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	$(document).on("pagecreate",function(){
+		$('#right_panel').panel();
+	});
+
+</script>
+</html>

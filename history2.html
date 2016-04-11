@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>收入统计</title>
+	<link rel="stylesheet" href="css/themes/myapp.min.css" />
+  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/history.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+	<script src="js/jquery.min.js"></script>	
+</head>
+<body>
+	<div data-role="page" id="his2">
+		<div data-role="header" data-position="fixed" id="header_color" class="myheader">
+			<a href="#" data-rel="back" class="myback ui-btn-trans">返回</a>
+			<h1 class="mytitle">历史教学</h1>
+			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
+			<div data-role="navbar" id="nav">
+				<ul>
+					<li><a href="history1.html">历史教学</a></li>
+					<li><a href="#" class="active">收入统计</a></li>
+					<li><a href="history3.html" class="reddot">累计评价</a></li>
+				</ul>
+			</div>
+		</div>
+		<div data-role="content" id="main">
+			<script type="text/javascript" src="js/ichart.1.2.min.js"></script>
+			<script type="text/javascript" src="js/chart.js"></script>
+			<div id="chart_wrap">
+				<div id='canvasDiv'></div>
+			</div>
+			<div id="income_sum">
+				<span>当前总收入：<i>3980元</i></span>
+			</div>			
+		</div>
+		<div data-role="panel" data-position="right" data-position-fixed="true" data-display="reveal" id="right_panel">
+			<h2><img src="images/head_sam.gif"></h2>
+			<h1>袁拓</h1>
+			<ul id="sidelist">
+				<li><a href="#">返回首页</a></li>
+				<li><a href="#">更换账号</a></li>
+				<li><a href="#">退出登录</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+</html>

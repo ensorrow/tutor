@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	<title>编辑评论</title>
+	<link rel="stylesheet" href="css/themes/myapp.min.css" />
+  	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/waiting.css">
+	<link rel="stylesheet" type="text/css" href="css/panel.css">
+</head>
+<body>
+	<div data-role="page" id="comment_page">
+		<div data-role="header" data-position="fixed" class="header_shadow">
+			<a href="#" data-rel="back" class="myback ui-btn-trans">返回</a>
+			<h1 class="mytitle">已完成</h1>
+			<a href="#right_panel" class="ui-btn-trans mymenu"></a>
+		</div>
+		<div data-role="content" id="edit">
+			<a href="#" data-rel="back" data-icon="carat-l" id="innerBack"></a>
+			<img src="images/area_top.png">
+			<form>
+				<textarea placeholder="记得认真评价哦~" cols="40" rows="8" id="ta1"></textarea>
+			
+				<div class="ui-grid-a">
+					<div class="ui-block-a"><input type="reset" value="重新编辑"></div>
+					<div class="ui-block-b"><a href="#" data-role="button">保存文档</a></div>
+				</div>
+				<a href="comment_dia.html" data-role="button" id="send_com">发送评价</a>
+			</form>
+		</div>
+		<div data-role="panel" data-position="right" data-position-fixed="true" data-display="reveal" id="right_panel">
+			<h2><img src="images/head_sam.gif"></h2>
+			<h1>袁拓</h1>
+			<ul id="sidelist">
+				<li><a href="#">返回首页</a></li>
+				<li><a href="#">更换账号</a></li>
+				<li><a href="#">退出登录</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript">
+	$(document).on("pagecreate",function(){
+		$('#right_panel').panel();
+	});
+</script>
+</html>
